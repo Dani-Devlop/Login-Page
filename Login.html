@@ -37,191 +37,194 @@
 
     <div class="Container-Card">
       <div class="flip-card" id="flipCard">
-        <input type="checkbox" id="flip-toggle" style="display: none" />
-
-        <!-- Front: Login -->
-        <div class="flip-card-front">
-          <h2>Login</h2>
-          <form>
-            <div class="input-group">
-              <!-- <label for="login-email" >Email</label> -->
-              <input
-                type="email"
-                id="login-email"
-                placeholder="Enter your email"
-                required />
-              <span class="icon">📧</span>
+        <input type="checkbox" id="flip-toggle" />
+        <div class="flip-card">
+          <!-- Front: Login -->
+          <div class="flip-card-front">
+            <h2>Login</h2>
+            <form>
+              <div class="input-group">
+                <!-- <label for="login-email" >Email</label> -->
+                <input
+                  type="email"
+                  id="login-email"
+                  placeholder="Enter your email"
+                  required />
+                <span class="icon">📧</span>
+              </div>
+              <div class="input-group">
+                <!-- <label for="login-password">Password</label> -->
+                <input
+                  type="password"
+                  id="login-password"
+                  placeholder="Enter your password"
+                  required />
+                <span class="icon">🔒</span>
+              </div>
+              <div class="options">
+                <label class="remember">
+                  <input type="checkbox" id="remember-me" />
+                  Remember me
+                </label>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+              </div>
+              <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <div class="social-login">
+              <p class="divider-text">Or login with</p>
+              <div class="social-buttons">
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with Google">
+                  <img
+                    src="https://www.svgrepo.com/show/380993/google-logo-search-new.svg"
+                    alt="Google"
+                    height="20px"
+                    width="20px" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with Apple">
+                  <img
+                    src="https://www.svgrepo.com/show/511330/apple-173.svg"
+                    alt="Apple"
+                    height="20px"
+                    width="20px" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with Facebook">
+                  <img
+                    src="https://www.svgrepo.com/show/448224/facebook.svg"
+                    alt="Facebook"
+                    height="20px"
+                    width="20px" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with X">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/450px-X_logo_2023.svg.png?20250120013756"
+                    alt="X"
+                    height="20px"
+                    width="20px" />
+                </button>
+              </div>
             </div>
-            <div class="input-group">
-              <!-- <label for="login-password">Password</label> -->
-              <input
-                type="password"
-                id="login-password"
-                placeholder="Enter your password"
-                required />
-              <span class="icon">🔒</span>
-            </div>
-            <div class="options">
-              <label class="remember">
-                <input type="checkbox" id="remember-me" />
-                Remember me
-              </label>
-              <a href="#" class="forgot-password">Forgot Password?</a>
-            </div>
-            <button type="submit" class="submit-btn">Login</button>
-          </form>
-          <div class="social-login">
-            <p class="divider-text">Or login with</p>
-            <div class="social-buttons">
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with Google">
-                <img
-                  src="https://www.svgrepo.com/show/380993/google-logo-search-new.svg"
-                  alt="Google"
-                  height="20px"
-                  width="20px" />
-              </button>
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with Apple">
-                <img
-                  src="https://www.svgrepo.com/show/511330/apple-173.svg"
-                  alt="Apple"
-                  height="20px"
-                  width="20px" />
-              </button>
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with Facebook">
-                <img
-                  src="https://www.svgrepo.com/show/448224/facebook.svg"
-                  alt="Facebook"
-                  height="20px"
-                  width="20px" />
-              </button>
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with X">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/450px-X_logo_2023.svg.png?20250120013756"
-                  alt="X"
-                  height="20px"
-                  width="20px" />
-              </button>
-            </div>
+            <p class="switch-text">
+              Don't have an account?
+              <label for="flip-toggle" class="flip-link">Register</label>
+            </p>
+            <p class="terms-text">
+              By Continuing you Agree to our
+              <a href="#">Terms &amp; Conditions</a>,
+              <a href="#">Privacy Policy</a>, and
+              <a href="#">Cookies Policy</a>.
+            </p>
           </div>
-          <p class="switch-text">
-            Don't have an account?
-            <label for="flip-toggle" class="flip-link">Register</label>
-          </p>
-          <p class="terms-text">
-            By Continuing you Agree to our
-            <a href="#">Terms &amp; Conditions</a>,
-            <a href="#">Privacy Policy</a>, and <a href="#">Cookies Policy</a>.
-          </p>
-        </div>
 
-        <!-- Back: Sign Up -->
-        <div class="flip-card-back">
-          <h2>Sign Up</h2>
-          <form>
-            <div class="input-group">
-              <!-- <label for="signup-name">Full Name</label> -->
-              <input
-                type="text"
-                id="signup-name"
-                placeholder="Enter your name"
-                required />
-              <span class="icon">👤</span>
+          <!-- Back: Sign Up -->
+          <div class="flip-card-back">
+            <h2>Sign Up</h2>
+            <form>
+              <div class="input-group">
+                <!-- <label for="signup-name">Full Name</label> -->
+                <input
+                  type="text"
+                  id="signup-name"
+                  placeholder="Enter your name"
+                  required />
+                <span class="icon">👤</span>
+              </div>
+              <div class="input-group">
+                <!-- <label for="signup-email">Email</label> -->
+                <input
+                  type="email"
+                  id="signup-email"
+                  placeholder="Enter your email"
+                  required />
+                <span class="icon">📧</span>
+              </div>
+              <div class="input-group">
+                <!-- <label for="signup-password">Password</label> -->
+                <input
+                  type="password"
+                  id="signup-password"
+                  placeholder="Create a password"
+                  required />
+                <span class="icon">🔒</span>
+              </div>
+              <div class="input-group">
+                <!-- <label for="signup-confirm">Confirm Password</label> -->
+                <input
+                  type="password"
+                  id="signup-confirm"
+                  placeholder="Confirm your password"
+                  required />
+                <span class="icon">🔒</span>
+              </div>
+              <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+            <div class="social-login">
+              <p class="divider-text">Or sign up with</p>
+              <div class="social-buttons">
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with Google">
+                  <img
+                    src="https://www.svgrepo.com/show/380993/google-logo-search-new.svg"
+                    alt="Google"
+                    height="20px"
+                    width="20px" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with Apple">
+                  <img
+                    src="https://www.svgrepo.com/show/511330/apple-173.svg"
+                    alt="Apple"
+                    height="20px"
+                    width="20px" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with Facebook">
+                  <img
+                    src="https://www.svgrepo.com/show/448224/facebook.svg"
+                    alt="Facebook"
+                    height="20px"
+                    width="20px" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with X">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/450px-X_logo_2023.svg.png?20250120013756"
+                    alt="X"
+                    height="20px"
+                    width="20px" />
+                </button>
+              </div>
             </div>
-            <div class="input-group">
-              <!-- <label for="signup-email">Email</label> -->
-              <input
-                type="email"
-                id="signup-email"
-                placeholder="Enter your email"
-                required />
-              <span class="icon">📧</span>
-            </div>
-            <div class="input-group">
-              <!-- <label for="signup-password">Password</label> -->
-              <input
-                type="password"
-                id="signup-password"
-                placeholder="Create a password"
-                required />
-              <span class="icon">🔒</span>
-            </div>
-            <div class="input-group">
-              <!-- <label for="signup-confirm">Confirm Password</label> -->
-              <input
-                type="password"
-                id="signup-confirm"
-                placeholder="Confirm your password"
-                required />
-              <span class="icon">🔒</span>
-            </div>
-            <button type="submit" class="submit-btn">Sign Up</button>
-          </form>
-          <div class="social-login">
-            <p class="divider-text">Or sign up with</p>
-            <div class="social-buttons">
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with Google">
-                <img
-                  src="https://www.svgrepo.com/show/380993/google-logo-search-new.svg"
-                  alt="Google"
-                  height="20px"
-                  width="20px" />
-              </button>
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with Apple">
-                <img
-                  src="https://www.svgrepo.com/show/511330/apple-173.svg"
-                  alt="Apple"
-                  height="20px"
-                  width="20px" />
-              </button>
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with Facebook">
-                <img
-                  src="https://www.svgrepo.com/show/448224/facebook.svg"
-                  alt="Facebook"
-                  height="20px"
-                  width="20px" />
-              </button>
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with X">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/450px-X_logo_2023.svg.png?20250120013756"
-                  alt="X"
-                  height="20px"
-                  width="20px" />
-              </button>
-            </div>
+            <p class="switch-text">
+              Already have an account?
+              <label for="flip-toggle" class="flip-link">Login</label>
+            </p>
+            <p class="terms-text">
+              By Continuing you Agree to our
+              <a href="#">Terms &amp; Conditions</a>,
+              <a href="#">Privacy Policy</a>, and
+              <a href="#">Cookies Policy</a>.
+            </p>
           </div>
-          <p class="switch-text">
-            Already have an account?
-            <label for="flip-toggle" class="flip-link">Login</label>
-          </p>
-          <p class="terms-text">
-            By Continuing you Agree to our
-            <a href="#">Terms &amp; Conditions</a>,
-            <a href="#">Privacy Policy</a>, and <a href="#">Cookies Policy</a>.
-          </p>
         </div>
       </div>
     </div>

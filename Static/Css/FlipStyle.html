@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Flip - Click to Flip</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            perspective: 1000px;
+        }
+
+        /* The card container */
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 400px;
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        /* When card is targeted (clicked), rotate it */
+        .flip-card:target {
+            transform: rotateY(180deg);
+        }
+
+        /* Front and back of card */
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Front side */
+        .flip-card-front {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            z-index: 1;
+        }
+
+        /* Back side */
+        .flip-card-back {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .flip-card-front p {
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .flip-card-back h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .flip-card-back p {
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        /* Button/Link styling */
+        .flip-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .flip-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .flip-btn-back {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .flip-btn-front {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Card that flips when clicked -->
+        <div class="flip-card" id="myCard">
+            
+            <!-- FRONT SIDE -->
+            <div class="flip-card-front">
+                <h2>👋 Front Side</h2>
+                <p>This is the front of the card. Click the button below to flip it and see the back side!</p>
+                <a href="#myCard" class="flip-btn flip-btn-front">Flip Card →</a>
+            </div>
+
+            <!-- BACK SIDE -->
+            <div class="flip-card-back">
+                <h2>✨ Back Side</h2>
+                <p>Congratulations! You flipped the card. Click below to go back to the front.</p>
+                <a href="#" class="flip-btn flip-btn-back">← Go Back</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
