@@ -1,3 +1,16 @@
-.Twitter{
-    fill: black;
+:root{
+    /* --background-img : url(https://static.vecteezy.com/system/resources/previews/016/265/607/non_2x/abstract-space-galaxy-view-with-blue-pink-cloud-free-vector.jpg); */
+    --background-img : linear-greadit
 }
+
+body{
+    background-image: linear-gradient(to right , white , yellow)
+}
+
+/* ----- Header --------*/
+
+.Logo-top{
+    display: flex;
+    flex-direction: row;
+}
+
