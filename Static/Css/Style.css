@@ -7,8 +7,10 @@
     #1e3a5f 100%
   );
   --Slash-color: #32a8a0;
-  --text-color: white;
+  --text-color-logo: white;
   --Shadow-Color-Card: 0 25px 70px rgba(0, 0, 0, 0.5);
+  /* Input */
+  --text-color-input : black;
 }
 
 * {
@@ -70,7 +72,7 @@ header{
   flex-direction: row;
   /* margin: 9px 20px auto; */
   margin: 0px 5px;
-  color: var(--text-color);
+  color: var(--text-color-logo);
 }
 
 .bracket-left,
@@ -87,7 +89,7 @@ header{
 }
 
 .slash {
-  color: var(--text-color);
+  color: var(--text-color-logo);
   font-size: 26px;
   margin: 0 -2px;
   font-weight: bold;
@@ -97,7 +99,7 @@ header{
   font-family: var(--font-family-base);
   font-size: 24px;
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--text-color-logo);
   margin-left: 4px;
 }
 
@@ -137,7 +139,7 @@ ul li {
 
 /* ul li a {
   display: flex;
-  color: var(--text-color);
+  color: var(--text-color-logo);
   text-align: right;
   padding: 14px 16px;
 } */
@@ -146,6 +148,7 @@ ul li {
 
 /* --------------------------------------------------------------------------- */
 
+/* Creat a Card for Each */
 
 #flip-toggle{
   display: none;
@@ -156,6 +159,31 @@ ul li {
 }
 
 
+.flip-card-Front , .flip-card-back  {
+  display: flex ;
+  width: 80%;
+  height: auto;
+  margin: 10px auto 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #efcd38;
+  border: 2px solid white ;
+}
+
+/* Login and Register Like a botton with ::hover */
+.flip-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.flip-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
 
 /* --------------------------------------------------------------------------- */
 
@@ -166,12 +194,14 @@ form{
   padding: 15px 0px 0px;
   margin-top: 10px;
   width: 50%;
+
 }
 
 .form__field{
   border: 0;
   border-right: 2px solid gray;
   border-bottom: 2px solid gray;
+  /* border-style: outset; */
   color: white;
   outline: 0;
   padding: 1px 0;
@@ -225,23 +255,34 @@ form{
 
 .input-group .icon {
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.2rem;
 }
 
+.icon img{
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+  display: block;
+  /* margin: 10px 5px ; */
+
+}
+
 .input-group .form__field {
+  height: 30px;
   width: 100%;
-  padding-right: 30px;
+  padding-right: 36px;
+  font-size: 1rem;
 }
 
 .input-group .form__label {
   position: absolute ;
-  top: -10px;
+  top: -1px;
   left: 0;
-  font-size: 0.85rem;
-  color: #32a8a0;
+  font-size: 1.1rem;
+  color: var(--text-color-input);
   font-weight: 600;
   pointer-events: none;
 }
