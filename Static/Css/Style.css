@@ -1,17 +1,18 @@
 :root {
   /* --background-img : url(https://static.vecteezy.com/system/resources/previews/016/265/607/non_2x/abstract-space-galaxy-view-with-blue-pink-cloud-free-vector.jpg); */
-  --background-img: linear-gradient(
-    135deg,
-    #1e3a5f 0%,
-    #2f597c 50%,
-    #1e3a5f 100%
-  );
+  --background-img: linear-gradient(135deg, #0b5351, #092327, #092327);
   --Slash-color: #32a8a0;
   --text-color-logo: white;
   --Shadow-Color-Card: 0 25px 70px rgba(0, 0, 0, 0.5);
   /* Input */
   --text-color-input: black;
   --color-invalid: rgb(255, 68, 68);
+  --button-color: #067e7c;
+  /* For button */
+  --button-color-dark: #053836;
+
+  /* Fonts */
+  --font-family: system-ui, -apple-system, sans-serif;
 }
 
 * {
@@ -25,11 +26,13 @@ html {
 }
 body {
   /* align-items: center; */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family);
   background: var(--background-img);
   /* min-height: 100vh; */
   position: relative;
   overflow-x: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 /* --------------------------------------------------------------------------- */
@@ -93,7 +96,7 @@ header {
 }
 
 .logo-text {
-  font-family: var(--font-family-base);
+  /* font-family: var(); */
   font-size: 24px;
   font-weight: bold;
   color: var(--text-color-logo);
@@ -102,12 +105,12 @@ header {
 
 .Logo-top:hover .bracket-left {
   transform: translateX(-3px) scale(1.1);
-  color: var(--primary-color);
+  color: var(--button-color -color);
 }
 
 .Logo-top:hover .bracket-right {
   transform: translateX(3px) scale(1.1);
-  color: var(--primary-color);
+  color: var(--button-color -color);
 }
 
 .Logo-top:hover .slash {
@@ -176,13 +179,13 @@ ul li {
 }
 
 .flip-link:hover {
-  color: var(--primary-color);
+  color: var(--button-color -color);
   text-decoration: underline;
 }
 
 /* --------------------------------------------------------------------------- */
 
-/* Customise  Input */
+/* Customise  Input Botton and form */
 
 form {
   position: relative;
@@ -294,10 +297,45 @@ form {
   margin-top: 20px;
 }
 
+/* Button */
+
+.submit-button {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  background: var(--button-color);
+  color: var(--text-color-logo);
+  font-weight: bolder;
+  font-size: 14px;
+  white-space: preserve-spaces;
+  border: none;
+  border-radius: 10px;
+  /* font-weight: 500; */
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.submit-button:hover {
+  background: var(--button-color-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25),
+    0 2px 4px rgba(59, 130, 246, 0.15);
+}
+
+.submit-button:hover .button-glow {
+  transform: translateX(100%);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
 
 /* New Thing */
 
-.error-message{
+.error-message {
   display: none;
 }
 /* :root {
@@ -362,12 +400,16 @@ form {
   font-size: 0.6rem;
 } */
 
-
-
-
 /* --------------------------------------------------------------------------- */
 
 /* Footer */
+footer {
+  /* display: inflex; */
+  height: 100XP;
+  background-color: #0b5351;
+  padding: 10px 20px;
+  font-size: 20px;
+}
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -378,3 +420,13 @@ form {
 }
 
 /* Footer social-icons  */
+a img {
+  text-decoration: none;
+  filter: invert(1) brightness(1.1);
+}
+
+.footer-content img {
+  filter: invert(1) brightness(1.1);
+  height: 18px;
+  /* width: 2; */
+}
