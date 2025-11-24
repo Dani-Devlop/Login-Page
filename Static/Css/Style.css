@@ -33,6 +33,7 @@ body {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
+  color: black;
 }
 
 /* --------------------------------------------------------------------------- */
@@ -168,10 +169,19 @@ ul li {
   background-color: #efcd38;
   border: 2px solid white;
 }
+.flip-card-Front a,
+.flip-card-back a {
+  color: var(--button-color);
+}
+
+.flip-card-Front a:hover,
+.flip-card-back a:hover {
+  color: var(--button-color-dark);
+}
 
 /* Login and Register Like a botton with ::hover */
 .flip-link {
-  color: var(--secondary-color);
+  color: var(--button-color);
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -179,8 +189,69 @@ ul li {
 }
 
 .flip-link:hover {
-  color: var(--button-color -color);
+  color: var(--button-color-dark);
   text-decoration: underline;
+}
+
+/* Sign up / Login with for both card */
+
+.separator {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  color: var(--text-color-input);
+}
+
+.separator .line {
+  display: inline;
+  width: 6em;
+  height: 1px;
+  border: 0;
+  background-color: #000000;
+}
+
+.social-login {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.social-login button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 0 20px 20px 0px;
+}
+.social-login button:first-child {
+  margin-left: 0;     
+}
+
+.social-login button:last-child {
+  margin-right: 0;     
+}
+
+.social-login img {
+  height: 30px;
+  width: 30px; 
+}
+
+/* paragraph text for i have a account / don't have */
+.switch-text{
+  display: block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+
 }
 
 /* --------------------------------------------------------------------------- */
