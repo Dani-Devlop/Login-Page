@@ -40,99 +40,111 @@
         <!-- Front: Login -->
         <div class="SignUp">
           <div class="flip-card-Front">
-          <h2>Login</h2>
-          <form>
-            <div class="input-group">
-              <input
-                type="email"
-                class="form__field"
-                name="email"
-                id="login-email"
-                required />
-              <label for="login-email" class="form__label">Email</label>
-              <span class="icon"><img src="https://www.svgrepo.com/show/488179/email.svg"></span>
+            <h2>Login</h2>
+            <form method="post">
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form__field"
+                  name="email"
+                  id="login-email"
+                  pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                  required />
+                <label for="login-email" class="form__label">Email</label>
+                <span class="icon"
+                  ><img src="https://www.svgrepo.com/show/488179/email.svg"
+                /></span>
+                <span class="error-message">Enter The Valid Email!</span>
+              </div>
+              <div class="input-group">
+                <input
+                  type="password"
+                  class="form__field"
+                  name="password"
+                  id="login-password"
+                  required />
+                <label for="login-password" class="form__label">Password</label>
+                <span class="icon"
+                  ><img
+                    src="https://www.svgrepo.com/show/535485/lock-closed.svg"
+                    alt=""
+                /></span>
+                <span class="error-message"
+                  >Minmum 8 Characher ( Char + number )</span
+                >
+              </div>
+              <div class="options">
+                <label class="remember">
+                  <input type="checkbox" id="remember-me" />
+                  Remember me
+                </label>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+              </div>
+              <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <div class="social-login">
+              <p class="divider-text">Or login with</p>
+              <div class="social-buttons">
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with Google">
+                  <img
+                    src="https://www.svgrepo.com/show/380993/google-logo-search-new.svg"
+                    alt="Google"
+                    height="20px"
+                    width="20px" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with Apple">
+                  <img
+                    src="https://www.svgrepo.com/show/511330/apple-173.svg"
+                    alt="Apple"
+                    height="20px"
+                    width="20px" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with Facebook">
+                  <img
+                    src="https://www.svgrepo.com/show/448224/facebook.svg"
+                    alt="Facebook"
+                    height="20px"
+                    width="20px" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn"
+                  aria-label="Login with X">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/450px-X_logo_2023.svg.png?2.0250120013756e+13"
+                    alt="X"
+                    height="20px"
+                    width="20px" />
+                </button>
+              </div>
             </div>
-            <div class="input-group">
-              <input
-                type="password"
-                class="form__field"
-                name="password"
-                id="login-password"
-                required />
-              <label for="login-password" class="form__label">Password</label>
-              <span class="icon"><img src="https://www.svgrepo.com/show/535485/lock-closed.svg" alt=""></span>
-            </div>
-            <div class="options">
-              <label class="remember">
-                <input type="checkbox" id="remember-me" />
-                Remember me
-              </label>
-              <a href="#" class="forgot-password">Forgot Password?</a>
-            </div>
-            <button type="submit" class="submit-btn">Login</button>
-          </form>
-          <div class="social-login">
-            <p class="divider-text">Or login with</p>
-            <div class="social-buttons">
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with Google">
-                <img
-                  src="https://www.svgrepo.com/show/380993/google-logo-search-new.svg"
-                  alt="Google"
-                  height="20px"
-                  width="20px" />
-              </button>
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with Apple">
-                <img
-                  src="https://www.svgrepo.com/show/511330/apple-173.svg"
-                  alt="Apple"
-                  height="20px"
-                  width="20px" />
-              </button>
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with Facebook">
-                <img
-                  src="https://www.svgrepo.com/show/448224/facebook.svg"
-                  alt="Facebook"
-                  height="20px"
-                  width="20px" />
-              </button>
-              <button
-                type="button"
-                class="social-btn"
-                aria-label="Login with X">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/450px-X_logo_2023.svg.png?2.0250120013756e+13"
-                  alt="X"
-                  height="20px"
-                  width="20px" />
-              </button>
-            </div>
+            <p class="switch-text">
+              Don't have an account?
+              <label for="flip-toggle" class="flip-link">Register</label>
+            </p>
+            <p class="terms-text">
+              By Continuing you Agree to our
+              <a href="#">Terms &amp; Conditions</a>,
+              <a href="#">Privacy Policy</a>, and
+              <a href="#">Cookies Policy</a>.
+            </p>
           </div>
-          <p class="switch-text">
-            Don't have an account?
-            <label for="flip-toggle" class="flip-link">Register</label>
-          </p>
-          <p class="terms-text">
-            By Continuing you Agree to our
-            <a href="#">Terms &amp; Conditions</a>,
-            <a href="#">Privacy Policy</a>, and <a href="#">Cookies Policy</a>.
-          </p>
-        </div>
         </div>
       </div>
       <!-- Back: Sign Up -->
       <div class="Signin">
         <div class="flip-card-back">
           <h2>Sign Up</h2>
-          <form>
+          <form method="post">
             <div class="input-group">
               <input
                 type="text"
@@ -142,6 +154,7 @@
                 required />
               <label for="name" class="form__label">Name</label>
               <span class="icon">👤</span>
+              <!-- <span class="error-message"> </span> -->
             </div>
             <div class="input-group">
               <input
@@ -149,9 +162,13 @@
                 class="form__field"
                 name="email"
                 id="signup-email"
+                pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
                 required />
               <label for="signup-email" class="form__label">Email</label>
-              <span class="icon">📧</span>
+              <span class="icon"
+                ><img src="https://www.svgrepo.com/show/488179/email.svg"
+              /></span>
+              <span class="error-message">Enter The Valid Email!</span>
             </div>
             <div class="input-group">
               <input
@@ -159,21 +176,33 @@
                 class="form__field"
                 name="password"
                 id="signup-password"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
                 required />
               <label for="signup-password" class="form__label">Password</label>
-              <span class="icon">🔒</span>
+              <span class="icon"
+                ><img
+                  src="https://www.svgrepo.com/show/535485/lock-closed.svg"
+                  alt=""
+              /></span>
+              <span class="error-message"
+                >Minmum 8 Characher ( Char + number )</span
+              >
             </div>
-            <div class="input-group">
+            <!-- Confirm Password -->
+            <!-- <div class="input-group">
               <input
                 type="password"
                 class="form__field"
                 name="confirm-password"
                 id="signup-confirm"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
                 required />
-              <label for="signup-confirm" class="form__label">Confirm Password</label>
+              <label for="signup-confirm" class="form__label"
+                >Confirm Password</label
+              >
               <span class="icon">🔒</span>
             </div>
-            <button type="submit" class="submit-btn">Sign Up</button>
+            <button type="submit" class="submit-btn">Sign Up</button> -->
           </form>
           <div class="social-login">
             <p class="divider-text">Or sign up with</p>
@@ -239,7 +268,8 @@
           <img
             src="https://www.svgrepo.com/show/34932/copyright-symbol.svg"
             alt=""
-            height="20px" />; 2025 Coding. All rights reserved.
+            height="15px" />
+          2025 Coding. All rights reserved.
         </p>
         <div class="social-icons">
           <a href="#" aria-label="GitHub">
@@ -255,6 +285,7 @@
               width="20px" />
           </a>
           <a href="#" aria-label="Twitter" class="Twitter">
+            
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/450px-X_logo_2023.svg.png?2.0250120013756e+13"
               alt="X"
