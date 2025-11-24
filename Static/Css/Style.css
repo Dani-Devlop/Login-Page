@@ -31,6 +31,7 @@ body {
   /* min-height: 100vh; */
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
   height: 100%;
   width: 100%;
   color: black;
@@ -60,6 +61,53 @@ header {
   margin: 20px 10px 10px auto;
   align-items: center;
 }
+
+/* Navbar */
+.Topnav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: var(--text-color-logo);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: var(--button-color);
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 5px rgba(50, 168, 160, 0.4);
+}
+
+.nav-login-btn:hover {
+  background: var(--button-color);
+  border-color: var(--button-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(50, 168, 160, 0.4);
+}
+/* Button in header */
+
+.nav-login-btn {
+  padding: 10px 24px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+}
+
 /* Logo */
 
 .Logo-top {
@@ -69,10 +117,11 @@ header {
   font-size: 24px;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
-  /* cursor:pointer; */
-  flex-direction: row;
+  cursor: pointer;
+  /* flex-direction: row; */
   /* margin: 9px 20px auto; */
   margin: 0px 5px;
+  margin-left: 20px;
   color: var(--text-color-logo);
 }
 
@@ -92,36 +141,38 @@ header {
 .slash {
   color: var(--text-color-logo);
   font-size: 26px;
-  margin: 0 -2px;
+  margin: 0 -10px;
   font-weight: bold;
 }
 
 .logo-text {
+  font-family: "Segoe UI", sans-serif;
   /* font-family: var(); */
   font-size: 24px;
   font-weight: bold;
   color: var(--text-color-logo);
   margin-left: 4px;
+  /* margin-right: 25px; */
 }
 
 .Logo-top:hover .bracket-left {
-  transform: translateX(-3px) scale(1.1);
-  color: var(--button-color -color);
+  transform: translateX(-4px) scale(1.15);
+  color: var(--Slash-color);
 }
 
 .Logo-top:hover .bracket-right {
-  transform: translateX(3px) scale(1.1);
-  color: var(--button-color -color);
+  transform: translateX(4px) scale(1.15);
+  color: var(--Slash-color);
 }
 
 .Logo-top:hover .slash {
   transform: rotate(15deg) scale(1.1);
-  color: var(--secondary-color);
+  color: var(--text-color-logo);
 }
 
 .Logo-top:hover .logo-text {
   color: var(--secondary-color);
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 /* NavBar */
@@ -168,6 +219,10 @@ ul li {
   align-items: center;
   background-color: #efcd38;
   border: 2px solid white;
+
+  /* Border-reduis - Padding = border reduules */
+
+  border-radius: 1.5em ;
 }
 .flip-card-Front a,
 .flip-card-back a {
@@ -232,26 +287,25 @@ ul li {
   margin: 0 20px 20px 0px;
 }
 .social-login button:first-child {
-  margin-left: 0;     
+  margin-left: 0;
 }
 
 .social-login button:last-child {
-  margin-right: 0;     
+  margin-right: 0;
 }
 
 .social-login img {
   height: 30px;
-  width: 30px; 
+  width: 30px;
 }
 
 /* paragraph text for i have a account / don't have */
-.switch-text{
+.switch-text {
   display: block;
   justify-content: center;
   text-align: center;
   align-items: center;
   margin-bottom: 20px;
-
 }
 
 /* --------------------------------------------------------------------------- */
