@@ -2,19 +2,21 @@
   --background-img: linear-gradient(135deg, #0b5351, #092327, #077283);
   --Slash-color: #32a8a0;
   --text-color-logo-text: white;
-  --Shadow-Color-Card: 0 30px 80px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(255, 255, 255, 0.05) inset;
+  --Shadow-Color-Card: 0 30px 80px rgba(0, 0, 0, 0.8),
+    0 2px 4px rgba(255, 255, 255, 0.05) inset;
   --text-color-input: black;
-  --text-tittle-form : rgba(255, 255, 255, 0.877);
+  --text-tittle-form: rgba(255, 255, 255, 0.877);
   --color-invalid: rgb(255, 68, 68);
   --button-color: #067e7c;
   --button-color-dark: #053836;
   --font-family: system-ui, -apple-system, sans-serif;
   /* --background-form: #efcd38; */
   /* Blur version */
-   --background-form: rgba(255,255,255,0,5);
---Link-color-form : #45AD82  ;
---Link-color-form-hover :#3cfada; 
-
+  --background-form: rgba(255, 255, 255, 0, 5);
+  --Link-color-form: #45ad82;
+  --Link-color-form-hover: #3cfada;
+  --Color-Border-Socials: #18a2b8;
+  --Color-Border-Socials-hover: #0f7a8a;
 }
 
 * {
@@ -38,7 +40,6 @@ body {
   color: var(--text-color-logo-text);
   display: flex;
   flex-direction: column;
-  
 }
 
 /* ========== HEADER ========== */
@@ -202,7 +203,6 @@ nav ul a:hover {
   transform: rotateY(180deg);
 }
 
-
 /* ========== FORM ELEMENTS ========== */
 h2 {
   color: var(--text-tittle-form);
@@ -251,14 +251,14 @@ h2 {
 
 .form__field:focus ~ .form__label,
 .form__field:not(:placeholder-shown) ~ .form__label {
-    margin-top: 10px;
+  margin-top: 10px;
   top: -10px;
   font-size: 0.8em;
   color: var(--Link-color-form-hover);
 }
 
-.underline{
-      position: absolute;
+.underline {
+  position: absolute;
   bottom: 0;
   left: 0;
   height: 2px;
@@ -277,9 +277,8 @@ h2 {
   transform: scaleX(1);
 }
 
-
 .icon img {
-     filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }
 .icon {
   position: absolute;
@@ -371,16 +370,14 @@ h2 {
   top: -2px;
   /* left: auto; */
   right: 1.7px;
-
 }
-
 
 .forgot-password {
   color: var(--Link-color-form);
   text-decoration: none;
   transition: all 0.3s ease;
   font-weight: 600;
-     text-decoration: underline;
+  text-decoration: underline;
 }
 
 .forgot-password:hover {
@@ -462,7 +459,7 @@ h2 {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 2.7px solid #00f2ff;
+  border: 3px solid var(--Color-Border-Socials);
   background: var(--text-color-logo-text);
   display: flex;
   align-items: center;
@@ -472,14 +469,15 @@ h2 {
 }
 
 .social-btn img {
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
 }
 
 .social-btn:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  border-color: var(--Link-color-form-hover);
+  box-shadow: 0 6px 18px var(--Link-color-form-hover);
+  border: 3.6px solid var(--Color-Border-Socials-hover);
+  /* border-color: #0f7a8a  ; */
 }
 
 .social-btn:active {
@@ -496,12 +494,12 @@ h2 {
 }
 
 .flip-link {
-  color: var(--Link-color-form) ;
+  color: var(--Link-color-form);
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-   text-decoration: underline;
+  text-decoration: underline;
 }
 
 .flip-link:hover {
@@ -513,20 +511,20 @@ h2 {
 .terms-text {
   margin: 1px auto -10px 10px;
   font-size: 14.5px;
-    line-height: 2;
+  line-height: 2;
   /* color: #666; */
 }
 
 .terms-text a {
-    text-decoration: underline;
-    color: var(--Link-color-form);
-    font-weight: bold;
+  text-decoration: underline;
+  color: var(--Link-color-form);
+  font-weight: bold;
 }
 
 .terms-text a:hover {
-    color: var(--Link-color-form-hover);
-    /* font-weight: bold; */
-    text-decoration: underline;
+  color: var(--Link-color-form-hover);
+  /* font-weight: bold; */
+  text-decoration: underline;
 }
 
 /* ========== FOOTER ========== */
@@ -552,7 +550,7 @@ footer {
   gap: 10px;
 }
 
-.social-icons a{
+.social-icons a {
   color: white;
   transition: all 0.3s ease;
   display: flex;
