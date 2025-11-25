@@ -423,6 +423,12 @@ form {
 }
 
 /* Fix for input-group spacing */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
 
 .input-group .icon {
   position: absolute;
