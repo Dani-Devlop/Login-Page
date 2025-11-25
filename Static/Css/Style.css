@@ -25,6 +25,11 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  display: inline-block;
+
+  justify-content: center;
+  align-items: center;
+
   /* align-items: center; */
   font-family: var(--font-family);
   background: var(--background-img);
@@ -200,20 +205,21 @@ ul li {
 
 /* Creat a Card for Each */
 
-#flip-toggle {
-  display: none;
-}
+
 
 .container-card {
-  display: none;
+  display: flex;
+  /* width: 35em; */
+  justify-content: center;
+  align-items: center;
 }
 
 .flip-card-Front,
 .flip-card-back {
   display: flex;
-  width: 80%;
+  width: 60vw;
   height: auto;
-  margin: 10px auto 20px;
+  margin: 20px auto; /* Space between 2 card  */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -222,7 +228,7 @@ ul li {
 
   /* Border-reduis - Padding = border reduules */
 
-  border-radius: 1.5em ;
+  border-radius: 1.5em;
 }
 .flip-card-Front a,
 .flip-card-back a {
@@ -254,11 +260,13 @@ ul li {
   margin-top: 20px;
   margin-bottom: 20px;
   width: 100%;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 10px;
   color: var(--text-color-input);
+  white-space: nowrap;
+  flex-wrap: nowrap;
 }
 
 .separator .line {
@@ -308,6 +316,24 @@ ul li {
   margin-bottom: 20px;
 }
 
+/* Increaze size for form ( left right */
+
+form {
+  padding: 40px 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------- */
+/* Make to 2 card to flip Coin */
+
+#flip-toggle {
+  display: none;
+}
+
+
+
 /* --------------------------------------------------------------------------- */
 
 /* Customise  Input Botton and form */
@@ -316,7 +342,10 @@ form {
   position: relative;
   padding: 15px 0px 0px;
   margin-top: 10px;
-  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  max-width: 500px;
 }
 
 .form__field {
@@ -426,13 +455,16 @@ form {
 
 .submit-button {
   position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 100%;
-  height: 40px;
+  height: 6dvh;
   margin-top: 8px;
   background: var(--button-color);
   color: var(--text-color-logo);
   font-weight: bolder;
-  font-size: 14px;
+  font-size: 17px;
   white-space: preserve-spaces;
   border: none;
   border-radius: 10px;
@@ -442,6 +474,12 @@ form {
   transition: all 0.2s ease;
 }
 
+.button-text {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .submit-button:hover {
   background: var(--button-color-dark);
   transform: translateY(-1px);
@@ -456,6 +494,17 @@ form {
 .submit-button:active {
   transform: translateY(0);
   box-shadow: none;
+}
+
+/* Remeber me and Forger password */
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 /* New Thing */
@@ -554,4 +603,61 @@ a img {
   filter: invert(1) brightness(1.1);
   height: 18px;
   /* width: 2; */
+}
+
+/* ----------- Media and responsive -------------- */
+
+/* 0 - 600 */
+/* Only Screen for before the 90's if " Only Screen " doesn't exist in our code they see mobile version on their Pc */
+/* Orientation is when turn the phone horizontally : portrait */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+}
+
+/* Orientation is when turn the phone vertically : Landscape */
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+}
+/* 601 - 768 / Tablet*/
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+}
+
+/* 769 - 991 / Lager Tablet */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+}
+/* 992 - 1000   */
+@media only screen and (min-width: 992px) {
+  .flip-card-Front,
+  .flip-card-back {
+    width: 32vw;
+  }
+  form {
+    width: 100%;
+  }
+  .separator {
+  }
+}
+
+/* 4k - 1208 To 2560  */
+
+/*  <600px , 601px , 768px , 992px , above 1200px*/
+/* Highest width display is 8k : 7680pixels */
+
+@supports (height: 100dvh) {
+  body,
+  .content-top {
+    height: 100dvh;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .wrapper-main {
+      height: calc(100dvh - 16px);
+    }
+  }
+}
+
+/* Fallback for iOS old */
+@supports not (height: 100dvh) {
+  body,
+  .content-top {
+    height: -webkit-fill-available;
+  }
 }
