@@ -4,43 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./Static/Css/Style.css" />
-    <title>Login & Sign Up</title>
+    <title>Login & Sign Up - Flip Card</title>
+    <link rel="stylesheet" href="./Static/Css/Style.css">
   </head>
   <body>
     <header>
       <div class="Logo-top">
-        <!-- <img
-          src="https://www.svgrepo.com/show/437565/chevron-left-slash-chevron-right.svg"
-          
-          width="20px"
-          alt="logo" /> -->
-        <div class="logo-icon">
-          <span class="bracket-left">&lt;</span>
-          <span class="slash">/</span>
-          <span class="bracket-right">&gt;</span>
-        </div>
-        <p>Coding</p>
+        <span class="bracket-left">&lt;</span>
+        <span class="slash">/</span>
+        <span class="bracket-right">&gt;</span>
+        <span class="logo-text">Coding</span>
       </div>
-      <div class="Topnav">
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">News</a></li>
-            <button href="#loginCard" class="nav-login-btn">Login</button>
-          </ul>
-        </nav>
-      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#news">News</a></li>
+          <a href="#loginCard" class="nav-login-btn">Login</a>
+        </ul>
+      </nav>
     </header>
-    <!-- ---------------------------------------------------------------------- -->
+
     <div class="Container-Card" id="loginCard">
       <input type="checkbox" id="flip-toggle" />
-      
-      <div class="flip-card" id="flipCard">
-        <!-- Front: Login -->
-        <div class="flip-card-Front">
+
+      <div class="flip-card">
+        <!-- ===== FRONT: LOGIN ===== -->
+        <div class="flip-card-front">
           <h2>Login</h2>
 
           <form method="post">
@@ -50,32 +41,39 @@
                 class="form__field"
                 name="email"
                 id="login-email"
+                placeholder=" "
                 pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
                 required />
               <label for="login-email" class="form__label">Email</label>
+              <div class="underline"></div>
               <span class="icon">
-                <img src="https://www.svgrepo.com/show/488179/email.svg" />
+                <img
+                  src="https://www.svgrepo.com/show/488179/email.svg"
+                  alt="Email" />
               </span>
               <span class="error-message">Enter The Valid Email!</span>
             </div>
-            <!-- -------------------------- -->
+
             <div class="input-group">
               <input
                 type="password"
                 class="form__field"
                 name="password"
                 id="login-password"
+                placeholder=" "
                 required />
               <label for="login-password" class="form__label">Password</label>
+              <div class="underline"></div>
               <span class="icon">
                 <img
                   src="https://www.svgrepo.com/show/535485/lock-closed.svg"
-                  alt="" />
+                  alt="Password" />
               </span>
               <span class="error-message"
-                >Minmum 8 Characher ( Char + number )</span
+                >Minimum 8 Character (Char + number)</span
               >
             </div>
+
             <div class="options">
               <label class="remember">
                 <input type="checkbox" id="remember-me" />
@@ -83,16 +81,19 @@
               </label>
               <a href="#" class="forgot-password">Forgot Password?</a>
             </div>
+
             <button class="submit-button" type="submit">
               <span class="button-text">Login</span>
               <div class="button-glow"></div>
             </button>
           </form>
+
           <div class="separator">
             <hr class="line" />
             <span>Or Login with</span>
             <hr class="line" />
           </div>
+
           <div class="social-login">
             <button
               type="button"
@@ -124,89 +125,76 @@
                 alt="X" />
             </button>
           </div>
+
           <p class="switch-text">
             Don't have an account?
             <label for="flip-toggle" class="flip-link">Register</label>
           </p>
         </div>
-      
 
-      <!-- Back: Sign Up -->
+        <!-- ===== BACK: SIGN UP ===== -->
         <div class="flip-card-back">
           <h2>Sign Up</h2>
 
           <form method="post">
             <div class="input-group">
               <input
-              placeholder=" "
                 type="text"
                 class="form__field"
                 name="name"
                 id="name"
+                placeholder=" "
                 required />
               <label for="name" class="form__label">Name</label>
-              <span class="icon"
-                ><img
+              <div class="underline"></div>
+              <span class="icon">
+                <img
                   src="https://www.svgrepo.com/show/506667/person.svg"
-                  alt=""
-              /></span>
-              <!-- <span class="error-message"> </span> -->
+                  alt="Name" />
+              </span>
             </div>
+
             <div class="input-group">
               <input
-              placeholder=" "
                 type="email"
                 class="form__field"
                 name="email"
                 id="signup-email"
+                placeholder=" "
                 pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
                 required />
               <label for="signup-email" class="form__label">Email</label>
-              <span class="icon"
-                ><img src="https://www.svgrepo.com/show/488179/email.svg"/>
+              <div class="underline"></div>
+              <span class="icon">
+                <img
+                  src="https://www.svgrepo.com/show/488179/email.svg"
+                  alt="Email" />
               </span>
               <span class="error-message">Enter The Valid Email!</span>
             </div>
+
             <div class="input-group">
               <input
-              placeholder=" "
                 type="password"
                 class="form__field"
                 name="password"
                 id="signup-password"
+                placeholder=" "
                 pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
                 required />
               <label for="signup-password" class="form__label">Password</label>
-              <span class="icon"
-                ><img
+              <div class="underline"></div>
+              <span class="icon">
+                <img
                   src="https://www.svgrepo.com/show/535485/lock-closed.svg"
-                  alt=""/>
+                  alt="Password" />
               </span>
               <span class="error-message"
-                >Minmum 8 Characher ( Char + number )</span
+                >Minimum 8 Character (Char + number)</span
               >
             </div>
-            <!-- Confirm Password -->
-            <!-- <div class="input-group">
-              <input
-                type="password"
-                class="form__field"
-                name="confirm-password"
-                id="signup-confirm"
-                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
-                required />
-              <label for="signup-confirm" class="form__label"
-                >Confirm Password</label
-              >
-              <span class="icon">🔒</span>
-            </div>-->
-            <div
-              style="
-                font-size: 15px;
-                color: #666;
-                margin: 15px 0;
-                line-height: 1.5;
-              ">
+
+            <div class="Igreeterms">
               <input type="checkbox" required />
               I agree to these
               <a
@@ -232,7 +220,7 @@
             <span>Or Sign up with</span>
             <hr class="line" />
           </div>
-          
+
           <div class="social-login">
             <button
               type="button"
@@ -267,6 +255,7 @@
                 alt="X" />
             </button>
           </div>
+
           <p class="switch-text">
             Already have an account?
             <label for="flip-toggle" class="flip-link">Login</label>
@@ -274,8 +263,6 @@
         </div>
       </div>
     </div>
-  
-    <!-- ---------------------------------------------------------------- -->
     <footer>
       <div class="footer-content">
         <p>&copy; 2025 Coding. All rights reserved.</p>

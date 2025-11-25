@@ -1,5 +1,4 @@
 :root {
-  /* --background-img : url(https://static.vecteezy.com/system/resources/previews/016/265/607/non_2x/abstract-space-galaxy-view-with-blue-pink-cloud-free-vector.jpg); */
   --background-img: linear-gradient(135deg, #0b5351, #092327, #092327);
   --Slash-color: #32a8a0;
   --text-color-logo: white;
@@ -23,46 +22,18 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
   font-family: var(--font-family);
   background: var(--background-img);
   position: relative;
   overflow-x: hidden;
   min-height: 100vh;
   width: 100%;
-  color: black;
+  color: var(--text-color-input);
+  display: flex;
+  flex-direction: column;
 }
 
-/* --------------------------------------------------------------------------- */
-
-/* ----- Header --------*/
-/* 
-header {
-  display: inline;
-  justify-content: space-between;
-  position: sticky;
-  align-items: center;
-  background: rgba(30, 58, 95, 0.9);
-  padding: 15px 40px;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-} */
-
-/* header {
-  display: flex;
-  top:0;
-  justify-content: space-between;
-  position: sticky;
-  margin: 20px 10px 10px auto;
-  align-items: center;
-} */
-
+/* ========== HEADER ========== */
 header {
   display: flex;
   justify-content: space-between;
@@ -75,6 +46,7 @@ header {
   z-index: 1000;
   backdrop-filter: blur(10px);
 }
+
 .Logo-top {
   display: flex;
   align-items: center;
@@ -97,14 +69,14 @@ header {
 .slash {
   color: var(--text-color-logo);
   font-size: 28px;
-  margin: 0 -10px;
+  margin: 0 -6px;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .logo-text {
-  font-family: "Segoe UI", sans-serif;
-  font-size: 24px;
+  /* font-family: "Segoe UI", sans-serif; */
+  font-size: 30px;
   font-weight: bold;
   color: var(--text-color-logo);
   margin-left: 6px;
@@ -120,21 +92,21 @@ header {
 
 .Logo-top:hover .slash {
   transform: rotate(15deg) scale(1.1);
-  color: var(--Slash-color);
+  color: var(--text-color-logo);
 }
 
-/* Navbar */
-.Topnav ul {
+nav ul {
   display: flex;
   list-style: none;
   align-items: center;
-  gap: 5px;
+  gap: px;
   margin: 0;
   padding: 0;
 }
 
-nav ul li a {
-  color: var(--text-color-logo);
+nav ul li,
+nav ul a {
+  color: white;
   cursor: pointer;
   padding: 8px 12px;
   transition: all 0.3s ease;
@@ -142,10 +114,10 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li a:hover {
+nav ul li:hover,
+nav ul a:hover {
   color: var(--Slash-color);
   transform: translateY(-2px);
-  /* box-shadow: 2px 2px 5px rgba(50, 168, 160, 0.4); */
 }
 
 .nav-login-btn {
@@ -162,17 +134,16 @@ nav ul li a:hover {
 }
 
 .nav-login-btn:hover {
-  background: var(--button-color);
-  border-color: var(--button-color);
+  background: var(--Slash-color);
+  color: var(--text-color-logo);
+  border-color: var(--Slash-color);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(50, 168, 160, 0.4);
 }
 
-/* --------------------------------------------------------------------------- */
-
-/* ========== CONTAINER ==========  */
-
-.container-card {
+/* ========== CONTAINER ========== */
+.Container-Card {
+  margin: 50px auto -60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,8 +152,7 @@ nav ul li a:hover {
   perspective: 1500px;
 }
 
-/* ========== FLIP CARD - CRITICAL ==========  */
-
+/* ========== FLIP CARD - CRITICAL ========== */
 #flip-toggle {
   display: none;
 }
@@ -199,44 +169,38 @@ nav ul li a:hover {
   transform: rotateY(180deg);
 }
 
-.flip-card-Front,
+.flip-card-front,
 .flip-card-back {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  height: 100%;
+  /* height: 80vh; */
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  justify-content: center;
-  align-items: center;
   backface-visibility: hidden;
-  background-color: var(--background-form);
-  /* Border-reduis - Padding = border reduules */
-  border-radius: 1.5em;
+  background: var(--background-form);
+  border-radius: 20px;
   padding: 45px 40px;
   box-shadow: var(--Shadow-Color-Card);
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
-  /* margin: 20px auto; */ /*Space between 2 card  */
 }
+
 .flip-card-back {
   transform: rotateY(180deg);
 }
 
-/* Links */
-.flip-card-Front a,
-.flip-card-back a {
-  color: var(--button-color);
-}
+.Igreeterms {
+  margin: 1px auto -10px 10px;
+  font-size: 14.5px;
+  color: #666;
 
-.flip-card-Front a:hover,
-.flip-card-back a:hover {
-  color: var(--button-color-dark);
+  line-height: 2;
 }
-
+.Igreeterms a {
+    font-weight: bold;
+}
 /* ========== FORM ELEMENTS ========== */
-
 h2 {
   color: var(--text-color-input);
   font-size: 34px;
@@ -244,6 +208,7 @@ h2 {
   text-align: center;
   font-weight: 700;
 }
+
 .input-group {
   position: relative;
   margin-bottom: 20px;
@@ -255,7 +220,7 @@ h2 {
   border: none;
   border-bottom: 2px solid #999;
   background: transparent;
-  font-size: 14px;
+  font-size: 18px;
   transition: all 0.3s ease;
   font-family: inherit;
   color: var(--text-color-input);
@@ -274,7 +239,207 @@ h2 {
   color: #999;
   font-size: 12px;
   font-weight: 600;
+  font-size: 16px;
   pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form__field:focus ~ .form__label,
+.form__field:not(:placeholder-shown) ~ .form__label {
+    margin-top: 10px;
+  top: -10px;
+  font-size: 0.8em;
+  color: var(--button-color);
+}
+
+.underline{
+      position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--button-color);
+  transform: scaleX(0);
+  transition: all 1s ease;
+}
+
+.input-group input[type="email"]:focus ~ .underline,
+.input-group input[type="email"]:valid ~ .underline,
+.input-group input[type="password"]:focus ~ .underline,
+.input-group input[type="password"]:valid ~ .underline,
+.input-group input[type="text"]:focus ~ .underline,
+.input-group input[type="text"]:valid ~ .underline {
+  transform: scaleX(1);
+}
+.icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.icon img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+.error-message {
+  font-size: 10px;
+  color: var(--color-invalid);
+  margin-top: 4px;
+  display: none;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto 4px auto;
+  font-size: 15px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.remember input[type="checkbox"] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.forgot-password {
+  color: var(--button-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.forgot-password:hover {
+  color: var(--button-color-dark);
+  text-decoration: underline;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  background: var(--button-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button:hover {
+  background: var(--button-color-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(6, 126, 124, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(-1px);
+}
+
+.button-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.5s ease;
+}
+
+.submit-button:hover .button-glow {
+  left: 100%;
+}
+
+/* ========== SEPARATOR ========== */
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  gap: 10px;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: #999;
+  border: none;
+}
+
+.separator span {
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ========== SOCIAL LOGIN ========== */
+.social-login {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border-color: var(--button-color);
+}
+
+.social-btn:active {
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* ========== SWITCH TEXT ========== */
+.switch-text {
+  text-align: center;
+  margin-top: 22px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.flip-link {
+  color: var(--button-color);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
@@ -283,323 +448,26 @@ h2 {
   text-decoration: underline;
 }
 
-/* Sign up / Login with for both card */
-
-.separator {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: var(--text-color-input);
-  white-space: nowrap;
-  flex-wrap: nowrap;
-}
-
-.separator .line {
-  display: inline;
-  width: 6em;
-  height: 1px;
-  border: 0;
-  background-color: #000000;
-}
-
-.social-login {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-.social-login button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border: none;
-  cursor: pointer;
-  border-radius: 50%;
-  padding: 8px;
-  margin: 0 20px 20px 0px;
-}
-.social-login button:first-child {
-  margin-left: 0;
-}
-
-.social-login button:last-child {
-  margin-right: 0;
-}
-
-.social-login img {
-  height: 30px;
-  width: 30px;
-}
-
-/* paragraph text for i have a account / don't have */
-.switch-text {
-  display: block;
-  justify-content: center;
+/* ========== TERMS ========== */
+.terms-text {
   text-align: center;
-  align-items: center;
-  margin-bottom: 20px;
+  margin-top: 18px;
+  font-size: 11px;
+  color: #999;
+  line-height: 1.6;
 }
 
-/* Increaze size for form ( left right */
-
-form {
-  padding: 40px 30px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* --------------------------------------------------------------------------- */
-/* Make to 2 card to flip Coin */
-
-/* --------------------------------------------------------------------------- */
-
-/* Customise  Input Botton and form */
-
-form {
-  position: relative;
-  padding: 15px 0px 0px;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-  max-width: 500px;
-}
-
-.form__field {
-  border: 0;
-  border-right: 2px solid gray;
-  border-bottom: 2px solid gray;
-  /* border-style: outset; */
-  color: white;
-  outline: 0;
-  padding: 1px 0;
-  background: transparent;
-  transition: border-color 0.2s;
-}
-.form__field::placeholder {
-  color: transparent;
-}
-.form__field:placeholder-shown ~ .form__label {
-  font-size: 1.3rem;
-  cursor: text;
-  top: -15px;
-}
-.form__label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: #9b9b9b;
-}
-.form__field:focus {
-  ~ .form__label {
-    position: absolute;
-    top: -20px;
-    display: block;
-    transition: 0.2s;
-    font-size: 1rem;
-    color: #11998e;
-    font-weight: 700;
-  }
-  padding-bottom: 6px;
-  /* font-weight: 700; */
-  border-width: 3px;
-  border-image: linear-gradient(to right, #11998e, #38ef7d);
-  border-image-slice: 1;
-}
-
-.form__field {
-  &:required,
-  &:invalid {
-    box-shadow: none;
-  }
-}
-
-/* Fix for input-group spacing */
-.input-group {
-  position: relative;
-  margin-bottom: 25px;
-  display: flex;
-  align-items: center;
-}
-
-.input-group .icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.2rem;
-}
-
-.icon img {
-  height: 20px;
-  width: 20px;
-  object-fit: contain;
-  display: block;
-  /* margin: 10px 5px ; */
-}
-
-.input-group .form__field {
-  height: 30px;
-  width: 100%;
-  padding-right: 36px;
-  font-size: 1rem;
-  color: var(--text-color-input);
-}
-
-.input-group__input:not(:focus):invalid {
-  color: var(--color-invalid);
-  animation: error-shake 600ms;
-  border: 2px solid var(--color-invalid);
-}
-
-.input-group .form__label {
-  position: absolute;
-  top: -1px;
-  left: 0;
-  font-size: 1.1rem;
+.terms-text a {
+  color: var(--button-color);
+  text-decoration: none;
   font-weight: 600;
-  pointer-events: none;
 }
 
-.Container-Card h2 {
-  font-display: block;
-  margin-top: 20px;
+.terms-text a:hover {
+  text-decoration: underline;
 }
 
-/* Button */
-
-.submit-button {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 6dvh;
-  margin-top: 8px;
-  background: var(--button-color);
-  color: var(--text-color-logo);
-  font-weight: bolder;
-  font-size: 17px;
-  white-space: preserve-spaces;
-  border: none;
-  border-radius: 10px;
-  /* font-weight: 500; */
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 0.2s ease;
-}
-
-.button-text {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.submit-button:hover {
-  background: var(--button-color-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25),
-    0 2px 4px rgba(59, 130, 246, 0.15);
-}
-
-.submit-button:hover .button-glow {
-  transform: translateX(100%);
-}
-
-.submit-button:active {
-  transform: translateY(0);
-  box-shadow: none;
-}
-
-/* Remeber me and Forger password */
-
-.options {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* New Thing */
-
-.error-message {
-  display: none;
-}
-/* :root {
-  --color-invalid: rgb(255, 68, 68);
-}
-
-@keyframes error-shake {
-  0% {
-    --left: -10px;
-  }
-  20% {
-    --left: 8px;
-  }
-  40% {
-    --left: -6px;
-  }
-  60% {
-    --left: 4px;
-  }
-  80% {
-    --left: -2px;
-  }
-  100% {
-    --left: 0;
-  }
-}
-
-.input-group {
-  position: relative;
-  --left: 0;
-}
-
-.formfield:not(:focus):invalid {
-  color: var(--color-invalid);
-  animation: error-shake 600ms;
-  border: 2px solid var(--color-invalid) !important;
-}
-
-.formfield:not(:focus):invalid ~ .error-message {
-  visibility: visible;
-  animation: error-shake 600ms;
-}
-
-.formfield:not(:focus):invalid ~ .formlabel {
-  color: var(--color-invalid);
-  border-color: var(--color-invalid);
-}
-
-.formfield,
-.error-message {
-  --left: 0;
-  left: var(--left);
-  position: relative;
-}
-
-.error-message {
-  color: var(--color-invalid);
-  display: block;
-  visibility: hidden;
-  margin-left: 20px;
-  margin-top: 1px;
-  font-size: 0.6rem;
-} */
-
-/* --------------------------------------------------------------------------- */
-
-/* Footer */
+/* ========== FOOTER ========== */
 footer {
   background: rgba(11, 83, 81, 0.95);
   padding: 25px 20px;
@@ -619,7 +487,7 @@ footer {
 
 .social-icons {
   display: flex;
-  gap: 18px;
+  gap: 10px;
 }
 
 .social-icons a {
@@ -639,59 +507,64 @@ footer {
   height: 20px;
 }
 
-/* ----------- Media and responsive -------------- */
-
-/* 0 - 600 */
-/* Only Screen for before the 90's if " Only Screen " doesn't exist in our code they see mobile version on their Pc */
-/* Orientation is when turn the phone horizontally : portrait */
-@media only screen and (max-width: 600px) and (orientation: portrait) {
-}
-
-/* Orientation is when turn the phone vertically : Landscape */
-@media only screen and (max-width: 600px) and (orientation: landscape) {
-}
-/* 601 - 768 / Tablet*/
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-}
-
-/* 769 - 991 / Lager Tablet */
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-}
-/* 992 - 1000   */
-@media only screen and (min-width: 992px) {
-  .flip-card-Front,
-  .flip-card-back {
-    width: 32vw;
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
   }
-  form {
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .flip-card {
     width: 100%;
-  }
-  .separator {
-  }
-}
-
-/* 4k - 1208 To 2560  */
-
-/*  <600px , 601px , 768px , 992px , above 1200px*/
-/* Highest width display is 8k : 7680pixels */
-
-@supports (height: 100dvh) {
-  body,
-  .content-top {
-    height: 100dvh;
+    max-width: 420px;
+    height: auto;
+    min-height: 650px;
   }
 
-  @media only screen and (max-width: 600px) {
-    .wrapper-main {
-      height: calc(100dvh - 16px);
-    }
+  .flip-card-front,
+  .flip-card-back {
+    padding: 35px 28px;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 22px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
   }
 }
 
-/* Fallback for iOS old */
-@supports not (height: 100dvh) {
-  body,
-  .content-top {
-    height: -webkit-fill-available;
+@media (max-width: 480px) {
+  .Container-Card {
+    padding: 30px 15px;
+  }
+
+  .flip-card {
+    max-width: 100%;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    padding: 30px 22px;
+  }
+
+  .social-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-btn img {
+    width: 18px;
+    height: 18px;
   }
 }
