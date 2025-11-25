@@ -4,15 +4,12 @@
   --Slash-color: #32a8a0;
   --text-color-logo: white;
   --Shadow-Color-Card: 0 25px 70px rgba(0, 0, 0, 0.5);
-  /* Input */
   --text-color-input: black;
   --color-invalid: rgb(255, 68, 68);
   --button-color: #067e7c;
-  /* For button */
   --button-color-dark: #053836;
-
-  /* Fonts */
   --font-family: system-ui, -apple-system, sans-serif;
+  --background-form: #efcd38;
 }
 
 * {
@@ -24,20 +21,18 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
 
   justify-content: center;
   align-items: center;
-
-  /* align-items: center; */
   font-family: var(--font-family);
   background: var(--background-img);
-  /* min-height: 100vh; */
   position: relative;
   overflow-x: hidden;
   min-height: 100vh;
-  height: 100%;
   width: 100%;
   color: black;
 }
@@ -59,12 +54,73 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 } */
 
-header {
+/* header {
   display: flex;
+  top:0;
   justify-content: space-between;
   position: sticky;
   margin: 20px 10px 10px auto;
   align-items: center;
+} */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(11, 83, 81, 0.95);
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+.Logo-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Courier New", monospace;
+  cursor: pointer;
+  color: var(--text-color-logo);
+}
+
+.bracket-left,
+.bracket-right {
+  color: var(--Slash-color);
+  font-size: 28px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.slash {
+  color: var(--text-color-logo);
+  font-size: 28px;
+  margin: 0 -10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.logo-text {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color-logo);
+  margin-left: 6px;
+}
+
+.Logo-top:hover .bracket-left {
+  transform: translateX(-4px) scale(1.15);
+}
+
+.Logo-top:hover .bracket-right {
+  transform: translateX(4px) scale(1.15);
+}
+
+.Logo-top:hover .slash {
+  transform: rotate(15deg) scale(1.1);
+  color: var(--Slash-color);
 }
 
 /* Navbar */
@@ -79,32 +135,24 @@ header {
 
 nav ul li a {
   color: var(--text-color-logo);
-  text-decoration: none;
   cursor: pointer;
   padding: 8px 12px;
   transition: all 0.3s ease;
   font-weight: 500;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
-  color: var(--button-color);
+  color: var(--Slash-color);
   transform: translateY(-2px);
-  box-shadow: 2px 2px 5px rgba(50, 168, 160, 0.4);
+  /* box-shadow: 2px 2px 5px rgba(50, 168, 160, 0.4); */
 }
-
-.nav-login-btn:hover {
-  background: var(--button-color);
-  border-color: var(--button-color);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(50, 168, 160, 0.4);
-}
-/* Button in header */
 
 .nav-login-btn {
-  padding: 10px 24px;
+  padding: 10px 24px !important;
   background: transparent;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid var(--text-color-logo);
+  color: var(--text-color-logo);
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -113,123 +161,70 @@ nav ul li a:hover {
   font-weight: 600;
 }
 
-/* Logo */
-
-.Logo-top {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Courier New", Courier, monospace;
-  cursor: pointer;
-  /* flex-direction: row; */
-  /* margin: 9px 20px auto; */
-  margin: 0px 5px;
-  margin-left: 20px;
-  color: var(--text-color-logo);
+.nav-login-btn:hover {
+  background: var(--button-color);
+  border-color: var(--button-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(50, 168, 160, 0.4);
 }
-
-.bracket-left,
-.bracket-right,
-.slash {
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.bracket-left,
-.bracket-right {
-  color: var(--Slash-color);
-  font-size: 26px;
-}
-
-.slash {
-  color: var(--text-color-logo);
-  font-size: 26px;
-  margin: 0 -10px;
-  font-weight: bold;
-}
-
-.logo-text {
-  font-family: "Segoe UI", sans-serif;
-  /* font-family: var(); */
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--text-color-logo);
-  margin-left: 4px;
-  /* margin-right: 25px; */
-}
-
-.Logo-top:hover .bracket-left {
-  transform: translateX(-4px) scale(1.15);
-  color: var(--Slash-color);
-}
-
-.Logo-top:hover .bracket-right {
-  transform: translateX(4px) scale(1.15);
-  color: var(--Slash-color);
-}
-
-.Logo-top:hover .slash {
-  transform: rotate(15deg) scale(1.1);
-  color: var(--text-color-logo);
-}
-
-.Logo-top:hover .logo-text {
-  color: var(--secondary-color);
-  letter-spacing: 1.5px;
-}
-
-/* NavBar */
-
-/* ul {
-  list-style-type: none;
-  overflow: hidden;
-  background-color: transparent;
-} */
-
-ul li {
-  display: inline-flex;
-  /* flex-direction: row; */
-  /* flex-grow: 1; */
-}
-
-/* ul li a {
-  display: flex;
-  color: var(--text-color-logo);
-  text-align: right;
-  padding: 14px 16px;
-} */
 
 /* --------------------------------------------------------------------------- */
 
-/* Creat a Card for Each */
-
-
+/* ========== CONTAINER ==========  */
 
 .container-card {
   display: flex;
-  /* width: 35em; */
   justify-content: center;
   align-items: center;
+  flex: 1;
+  padding: 50px 20px;
+  perspective: 1500px;
+}
+
+/* ========== FLIP CARD - CRITICAL ==========  */
+
+#flip-toggle {
+  display: none;
+}
+
+.flip-card {
+  width: 460px;
+  height: 700px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+#flip-toggle:checked ~ .flip-card {
+  transform: rotateY(180deg);
 }
 
 .flip-card-Front,
 .flip-card-back {
+  position: absolute;
   display: flex;
-  width: 60vw;
-  height: auto;
-  margin: 20px auto; /* Space between 2 card  */
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
   justify-content: center;
   align-items: center;
-  background-color: #efcd38;
-  border: 2px solid white;
-
+  backface-visibility: hidden;
+  background-color: var(--background-form);
   /* Border-reduis - Padding = border reduules */
-
   border-radius: 1.5em;
+  padding: 45px 40px;
+  box-shadow: var(--Shadow-Color-Card);
+  overflow-y: auto;
+  /* margin: 20px auto; */ /*Space between 2 card  */
 }
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Links */
 .flip-card-Front a,
 .flip-card-back a {
   color: var(--button-color);
@@ -240,12 +235,46 @@ ul li {
   color: var(--button-color-dark);
 }
 
-/* Login and Register Like a botton with ::hover */
-.flip-link {
-  color: var(--button-color);
-  text-decoration: none;
+/* ========== FORM ELEMENTS ========== */
+
+h2 {
+  color: var(--text-color-input);
+  font-size: 34px;
+  margin-bottom: 28px;
+  text-align: center;
   font-weight: 700;
-  cursor: pointer;
+}
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form__field {
+  width: 100%;
+  padding: 13px 40px 13px 16px;
+  border: none;
+  border-bottom: 2px solid #999;
+  background: transparent;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  color: var(--text-color-input);
+}
+
+.form__field:focus {
+  outline: none;
+  border-bottom-color: var(--button-color);
+}
+
+.form__label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: none;
   transition: all 0.3s ease;
 }
 
@@ -328,12 +357,6 @@ form {
 /* --------------------------------------------------------------------------- */
 /* Make to 2 card to flip Coin */
 
-#flip-toggle {
-  display: none;
-}
-
-
-
 /* --------------------------------------------------------------------------- */
 
 /* Customise  Input Botton and form */
@@ -400,12 +423,6 @@ form {
 }
 
 /* Fix for input-group spacing */
-.input-group {
-  position: relative;
-  margin-bottom: 25px;
-  display: flex;
-  align-items: center;
-}
 
 .input-group .icon {
   position: absolute;
@@ -578,31 +595,42 @@ form {
 
 /* Footer */
 footer {
-  /* display: inflex; */
-  height: 100XP;
-  background-color: #0b5351;
-  padding: 10px 20px;
-  font-size: 20px;
+  background: rgba(11, 83, 81, 0.95);
+  padding: 25px 20px;
+  text-align: center;
+  margin-top: auto;
 }
+
 .footer-content {
   display: flex;
   justify-content: space-between;
-  position: sticky;
-  margin: 20px 10px 10px auto;
   align-items: center;
-  color: var(--text-color-logo);
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+  font-size: 14px;
 }
 
-/* Footer social-icons  */
-a img {
-  text-decoration: none;
-  filter: invert(1) brightness(1.1);
+.social-icons {
+  display: flex;
+  gap: 18px;
 }
 
-.footer-content img {
-  filter: invert(1) brightness(1.1);
-  height: 18px;
-  /* width: 2; */
+.social-icons a {
+  color: white;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a:hover {
+  color: var(--Slash-color);
+  transform: translateY(-4px) scale(1.1);
+}
+
+.social-icons svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* ----------- Media and responsive -------------- */
