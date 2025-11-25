@@ -1,14 +1,20 @@
 :root {
-  --background-img: linear-gradient(135deg, #0b5351, #092327, #092327);
+  --background-img: linear-gradient(135deg, #0b5351, #092327, #077283);
   --Slash-color: #32a8a0;
-  --text-color-logo: white;
-  --Shadow-Color-Card: 0 25px 70px rgba(0, 0, 0, 0.5);
+  --text-color-logo-text: white;
+  --Shadow-Color-Card: 0 30px 80px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(255, 255, 255, 0.05) inset;
   --text-color-input: black;
+  --text-tittle-form : rgba(255, 255, 255, 0.877);
   --color-invalid: rgb(255, 68, 68);
   --button-color: #067e7c;
   --button-color-dark: #053836;
   --font-family: system-ui, -apple-system, sans-serif;
-  --background-form: #efcd38;
+  /* --background-form: #efcd38; */
+  /* Blur version */
+   --background-form: rgba(255,255,255,0,5);
+--Link-color-form : #45AD82  ;
+--Link-color-form-hover :#3cfada; 
+
 }
 
 * {
@@ -23,14 +29,16 @@ html {
 
 body {
   font-family: var(--font-family);
+  /* background-image: url(https://static.vecteezy.com/system/resources/thumbnails/006/240/302/small/abstract-soft-focus-sunset-field-landscape-of-yellow-flowers-and-grass-meadow-warm-golden-hour-sunset-sunrise-time-tranquil-spring-summer-nature-closeup-and-blurred-forest-background-idyllic-nature-photo.jpg) ; */
   background: var(--background-img);
   position: relative;
   overflow-x: hidden;
   min-height: 100vh;
   width: 100%;
-  color: var(--text-color-input);
+  color: var(--text-color-logo-text);
   display: flex;
   flex-direction: column;
+  
 }
 
 /* ========== HEADER ========== */
@@ -55,7 +63,7 @@ header {
   font-weight: bold;
   font-family: "Courier New", monospace;
   cursor: pointer;
-  color: var(--text-color-logo);
+  color: var(--text-color-logo-text);
 }
 
 .bracket-left,
@@ -67,7 +75,7 @@ header {
 }
 
 .slash {
-  color: var(--text-color-logo);
+  color: var(--text-color-logo-text);
   font-size: 28px;
   margin: 0 -6px;
   font-weight: bold;
@@ -78,7 +86,7 @@ header {
   /* font-family: "Segoe UI", sans-serif; */
   font-size: 30px;
   font-weight: bold;
-  color: var(--text-color-logo);
+  color: var(--text-color-logo-text);
   margin-left: 6px;
 }
 
@@ -92,7 +100,7 @@ header {
 
 .Logo-top:hover .slash {
   transform: rotate(15deg) scale(1.1);
-  color: var(--text-color-logo);
+  color: var(--text-color-logo-text);
 }
 
 nav ul {
@@ -106,7 +114,7 @@ nav ul {
 
 nav ul li,
 nav ul a {
-  color: white;
+  color: var(--text-color-logo-text);
   cursor: pointer;
   padding: 8px 12px;
   transition: all 0.3s ease;
@@ -123,8 +131,8 @@ nav ul a:hover {
 .nav-login-btn {
   padding: 10px 24px !important;
   background: transparent;
-  border: 2px solid var(--text-color-logo);
-  color: var(--text-color-logo);
+  border: 2px solid var(--text-color-logo-text);
+  color: var(--text-color-logo-text);
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -135,7 +143,7 @@ nav ul a:hover {
 
 .nav-login-btn:hover {
   background: var(--Slash-color);
-  color: var(--text-color-logo);
+  color: var(--text-color-logo-text);
   border-color: var(--Slash-color);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(50, 168, 160, 0.4);
@@ -175,34 +183,29 @@ nav ul a:hover {
   /* height: 80vh; */
   position: absolute;
   top: 0;
+  /* background: ; */
   left: 0;
   backface-visibility: hidden;
-  background: var(--background-form);
+  /* background: var(--background-form); */
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 45px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
   box-shadow: var(--Shadow-Color-Card);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
 }
 
 .flip-card-back {
   transform: rotateY(180deg);
 }
 
-.Igreeterms {
-  margin: 1px auto -10px 10px;
-  font-size: 14.5px;
-  color: #666;
 
-  line-height: 2;
-}
-.Igreeterms a {
-    font-weight: bold;
-}
 /* ========== FORM ELEMENTS ========== */
 h2 {
-  color: var(--text-color-input);
+  color: var(--text-tittle-form);
   font-size: 34px;
   margin-bottom: 28px;
   text-align: center;
@@ -223,7 +226,9 @@ h2 {
   font-size: 18px;
   transition: all 0.3s ease;
   font-family: inherit;
-  color: var(--text-color-input);
+  /* color: var(--text-color-input); */
+  /* White version */
+  color: var(--text-color-logo-text);
 }
 
 .form__field:focus {
@@ -236,7 +241,7 @@ h2 {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  color: #999;
+  color: (var(--text-color-logo-text));
   font-size: 12px;
   font-weight: 600;
   font-size: 16px;
@@ -249,7 +254,7 @@ h2 {
     margin-top: 10px;
   top: -10px;
   font-size: 0.8em;
-  color: var(--button-color);
+  color: var(--Link-color-form-hover);
 }
 
 .underline{
@@ -258,7 +263,7 @@ h2 {
   left: 0;
   height: 2px;
   width: 100%;
-  background-color: var(--button-color);
+  background-color: var(--Link-color-form-hover);
   transform: scaleX(0);
   transition: all 1s ease;
 }
@@ -270,6 +275,11 @@ h2 {
 .input-group input[type="text"]:focus ~ .underline,
 .input-group input[type="text"]:valid ~ .underline {
   transform: scaleX(1);
+}
+
+
+.icon img {
+     filter: brightness(0) invert(1);
 }
 .icon {
   position: absolute;
@@ -301,30 +311,80 @@ h2 {
   font-size: 15px;
 }
 
+/* Checkbox */
+
 .remember {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: #555;
+  color: var(--text-color-logo-text);
   cursor: pointer;
   font-weight: 500;
+  position: relative;
 }
 
 .remember input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
   cursor: pointer;
-  width: 16px;
-  height: 16px;
+  margin: 0;
+  padding: 0;
+  width: 18px;
+  height: 18px;
 }
 
+/* چک‌باکس سفارشی */
+.checkmark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: 2px solid var(--text-color-logo-text);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  order: -1;
+}
+
+.remember:hover .checkmark {
+  border-color: var(--button-color);
+  box-shadow: 0 0 8px rgba(50, 168, 160, 0.3);
+}
+
+.remember input[type="checkbox"]:checked ~ .checkmark {
+  background-color: var(--button-color);
+  border-color: var(--button-color);
+  box-shadow: 0 0 8px rgba(50, 168, 160, 0.5);
+}
+
+/* علامت تیک قشنگ */
+.remember input[type="checkbox"]:checked ~ .checkmark::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  top: -2px;
+  /* left: auto; */
+  right: 1.7px;
+
+}
+
+
 .forgot-password {
-  color: var(--button-color);
+  color: var(--Link-color-form);
   text-decoration: none;
   transition: all 0.3s ease;
   font-weight: 600;
+     text-decoration: underline;
 }
 
 .forgot-password:hover {
-  color: var(--button-color-dark);
+  color: var(--Link-color-form-hover);
   text-decoration: underline;
 }
 
@@ -332,7 +392,7 @@ h2 {
   width: 100%;
   padding: 15px;
   background: var(--button-color);
-  color: white;
+  color: var(--text-color-logo-text);
   border: none;
   border-radius: 10px;
   font-size: 16px;
@@ -380,12 +440,12 @@ h2 {
 .line {
   flex: 1;
   height: 1px;
-  background: #999;
+  background: var(--text-color-logo-text);
   border: none;
 }
 
 .separator span {
-  color: #666;
+  color: var(--text-color-logo-text);
   font-size: 13px;
   font-weight: 500;
 }
@@ -402,8 +462,8 @@ h2 {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 2px solid #ddd;
-  background: white;
+  border: 2.7px solid #00f2ff;
+  background: var(--text-color-logo-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -419,7 +479,7 @@ h2 {
 .social-btn:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  border-color: var(--button-color);
+  border-color: var(--Link-color-form-hover);
 }
 
 .social-btn:active {
@@ -430,41 +490,43 @@ h2 {
 .switch-text {
   text-align: center;
   margin-top: 22px;
-  color: #666;
+  color: var(--text-color-logo-text);
   font-size: 14px;
   font-weight: 500;
 }
 
 .flip-link {
-  color: var(--button-color);
+  color: var(--Link-color-form) ;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
+   text-decoration: underline;
 }
 
 .flip-link:hover {
-  color: var(--button-color-dark);
+  color: var(--Link-color-form-hover);
   text-decoration: underline;
 }
 
 /* ========== TERMS ========== */
 .terms-text {
-  text-align: center;
-  margin-top: 18px;
-  font-size: 11px;
-  color: #999;
-  line-height: 1.6;
+  margin: 1px auto -10px 10px;
+  font-size: 14.5px;
+    line-height: 2;
+  /* color: #666; */
 }
 
 .terms-text a {
-  color: var(--button-color);
-  text-decoration: none;
-  font-weight: 600;
+    text-decoration: underline;
+    color: var(--Link-color-form);
+    font-weight: bold;
 }
 
 .terms-text a:hover {
-  text-decoration: underline;
+    color: var(--Link-color-form-hover);
+    /* font-weight: bold; */
+    text-decoration: underline;
 }
 
 /* ========== FOOTER ========== */
@@ -490,7 +552,7 @@ footer {
   gap: 10px;
 }
 
-.social-icons a {
+.social-icons a{
   color: white;
   transition: all 0.3s ease;
   display: flex;
