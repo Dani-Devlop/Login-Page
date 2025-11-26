@@ -196,7 +196,7 @@ nav ul a:hover {
 .flip-card-back {
   width: 100%;
   /* height: 80vh; */
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   /* background: ; */
   left: 0;
@@ -962,12 +962,16 @@ footer {
 
   .flip-card-front,
   .flip-card-back {
+    position: absolute;
     padding: 12px 8px;
     border-radius: 0.7em;
     box-shadow: none;
     height: auto;
     min-height: auto;
-    position: relative;
+  }
+  
+  .flip-card-back{
+    margin-bottom: -10000000000px;
   }
 
   h2 {
@@ -1066,46 +1070,85 @@ footer {
 
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 20px;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
+  .Container-Card {
+    padding: 25px 20px;
+    margin: 20px auto;
+    flex: 1;
+    display: flex;
     justify-content: center;
-    gap: 12px;
+    align-items: center;
   }
 
-.flip-card {
-  width: 100%;
-  height: auto;
-  min-height: auto;
-  max-width: 100%;
-}
+  .flip-card {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    min-height: auto;
+  }
 
-.flip-card-front,
-.flip-card-back {
-  padding: 22px 16px;
-  border-radius: 1em;
-  box-shadow: none;
-  height: auto;
-  min-height: auto;
-}
+  .flip-card-front,
+  .flip-card-back {
+    padding: 28px 24px;
+    border-radius: 15px;
+    height: auto;
+    min-height: auto;
+  }
 
   h2 {
-    font-size: 28px;
-    margin-bottom: 22px;
+    font-size: 25px;
+    margin-bottom: 18px;
   }
 
-  .footer-content {
-    flex-direction: column;
-    gap: 15px;
+  .form__field {
+    font-size: 14px;
+    padding: 11px 33px 11px 14px;
+    margin-bottom: 16px;
+  }
+
+  .submit-button {
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 16px;
+  }
+
+  .separator {
+    margin: 20px 0;
+  }
+
+  .social-btn {
+    width: 43px;
+    height: 43px;
+  }
+
+  .social-btn img {
+    width: 19px;
+    height: 19px;
+  }
+
+  .terms-text {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+
+  .terms-text a {
+    font-size: 12px;
+  }
+
+  footer {
+    padding: 18px 15px;
+    margin-top: auto;
+  }
+
+  .remember {
+    font-size: 12px;
+  }
+
+  .switch-text {
+    font-size: 12px;
+    margin-top: 16px;
   }
 }
 
-/* 769 - 991 / Lager Tablet */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
 }
 /* 992 - 1000   */
