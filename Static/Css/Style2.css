@@ -33,8 +33,6 @@
 }
 
 html {
-  width: 100%;
-  height: 100%;
   scroll-behavior: smooth;
 }
 
@@ -49,21 +47,16 @@ body {
   color: var(--text-color-logo-text);
   display: flex;
   flex-direction: column;
-  width: 100%;
-  background-attachment: fixed;
 }
 
 /* ========== HEADER ========== */
 header {
-  background: var(--background-form);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background: var(--background-form); */
+  background: rgba(11, 83, 81, 0.95);
   padding: 15px 40px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 0px 0px 0.7em 0.7em;
-  box-shadow: var(--Shadow-Color-Card);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -196,7 +189,7 @@ nav ul a:hover {
 .flip-card-back {
   width: 100%;
   /* height: 80vh; */
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   /* background: ; */
   left: 0;
@@ -250,25 +243,14 @@ h2 {
   border-bottom-color: var(--button-color);
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
-  -webkit-text-fill-color: white !important;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-  background-color: transparent !important;
-}
-
 .form__label {
   position: absolute;
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  color: (var(--text-color-logo-text));
-  font-size: 12px;
+  color: var(--text-color-logo-text);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.6rem;
   pointer-events: none;
   transition: all 0.3s ease;
 }
@@ -303,18 +285,19 @@ input:-webkit-autofill:focus {
 
 .icon img {
   filter: brightness(0) invert(1);
-  width: 1.5rem;
-  height: 1.5rem;
+    width: 2.0em;
+  height: 2.0em;
   opacity: 0.7;
 }
 .icon {
   position: absolute;
-  right: 0.875rem;
+  right: 14px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 18px;
   pointer-events: none;
 }
+
 
 .error-message {
   font-size: 10px;
@@ -531,14 +514,14 @@ input:-webkit-autofill:focus {
 
 /* ========== TERMS ========== */
 .terms-text {
+  display: flex;
+  align-items: center;
   margin: auto;
   margin-top: 10px;
   /* margin: 1px auto -10px 10px; */
   font-size: 14.5px;
   line-height: 2;
   /* color: #666; */
-  display: flex;
-  align-items: center;
   gap: 6px;
   color: var(--text-color-logo-text);
   cursor: pointer;
@@ -649,508 +632,247 @@ footer {
   height: 20px;
 }
 
+
+
 /* ----------- Media and responsive -------------- */
 
 /* 0 - 600 */
 /* Only Screen for before the 90's if " Only Screen " doesn't exist in our code they see mobile version on their Pc */
 /* Orientation is when turn the phone horizontally : portrait */
 @media only screen and (max-width: 600px) and (orientation: portrait) {
-  body {
-    /* width: 52dvh; */
-    display: inline-block;
-    flex-direction: column;
-    align-items: center;
-  }
-  header {
-    /* justify-content: space-between;   */
-    justify-content: center; /* این خط اضافه شود */
-    align-items: center;
-    padding: 1vw 6vw;
-    flex-wrap: wrap;
-    gap: 1px;
-  }
-  .form-options {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  .Logo-top {
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    flex-basis: 100%;
-    text-align: center;
-    margin-bottom: 1px;
-  }
+    /* ━━━━━ HEADER - اضافه کنید ━━━━━ */
+    header {
+        display: flex;
+        flex-direction: column;  
+        /* justify-content: space-between;   */
+        align-items: center;
+        padding: 1vw 6vw;
+        flex-wrap: wrap; 
+        gap:1px;
+    }
 
-  .logo-text {
-    font-size: 1.5rem;
-  }
+    .Logo-top {
+        font-size: 20px;
+        flex-basis: 100%;  
+        text-align: center;
+        margin-bottom: 1;
+    }
 
-  nav {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
-  }
+    .logo-text {
+        font-size: 24px;
+    }
 
-  nav ul {
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
+    nav {
+        flex-basis: 100%;  /* ✅ navigation تو خط دوم */
+        display: flex;
+        justify-content: center;
+    }
 
-  nav ul li,
-  nav ul a {
-    margin: 0.01em;
-    padding: 5px 8px;
-    font-size: 1.2rem;
-  }
+    nav ul {
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: center;
+    }
 
-  .nav-login-btn {
-    padding: 0.5rem 1.125rem !important;
-    font-size: 1.2em;
-    border-radius: 20;
-  }
+    nav ul li,
+    nav ul a {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
 
-  /* ━━━━━ Container ━━━━━ */
-  .Container-Card {
-    padding: 0.5rem 0.2rem 0rem !important;
-    margin: 0.5rem auto -2rem auto;
-  }
-  /* ━━━━━ Flip Card ━━━━━ */
-  .underline {
-    position: absolute;
-    left: 0;
-    bottom: 1.5px;
-    height: 2px;
-    width: 100%;
-    background-color: var(--link-color-form-hover);
-    transform: scaleX(0);
-    transition: all 1s ease;
-    /* top: 1%; */
-  }
-  .form__label {
-    position: absolute;
-    top: 30%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: (var(--text-color-logo-text));
-    font-weight: 600;
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
-  .flip-card {
-    width: 100%;
-    height: auto;
-    min-height: 550px;
-    max-width: 300px;
-  }
+    .nav-login-btn {
+        padding: 8px 18px !important;
+        font-size: 12px;
+        border-radius: 20px;
+    }
 
-  .flip-card-front,
-  .flip-card-back {
-    padding: 22px 16px;
-    border-radius: 1em;
-    box-shadow: none;
-  }
+    /* ━━━━━ Container ━━━━━ */
+    .Container-Card {
+        padding: 20px 10px;
+        margin: 20px auto 0;
+    }
 
-  /* ━━━━━ Title ━━━━━ */
-  h2 {
-    font-size: 24px;
-    margin-bottom: 18px;
-  }
+    /* ━━━━━ Flip Card ━━━━━ */
+    .flip-card {
+        width: 100%;
+        height: auto;
+        min-height: 550px;
+        max-width: 300px;
+    }
 
-  /* ━━━━━ Form Inputs ━━━━━ */
-  .form__field {
-    font-size: 14px;
-    padding: 10px 30px 10px 12px;
-    margin-top: 1px;
-    margin-bottom: 1px;
-  }
+    .flip-card-front,
+    .flip-card-back {
+        padding: 22px 16px;
+        border-radius: 12px;
+    }
 
-  .form__field::placeholder {
-    font-size: 13px;
-  }
+    /* ━━━━━ Title ━━━━━ */
+    h2 {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
 
-  /* ━━━━━ Labels ━━━━━ */
-  label {
-    font-size: 13px;
-    margin-bottom: 6px;
-  }
+    /* ━━━━━ Form Inputs ━━━━━ */
+    .form__field {
+        font-size: 1.4rem;
+        padding: 10px 30px 10px 12px;
+        margin-bottom: 1.2rem;
+    }
 
-  /* ━━━━━ Icon ━━━━━ */
-  .icon {
-    width: 18px;
-    height: 18px;
-  }
+    .form__field::placeholder {
+        font-size: 13re;
+    }
 
-  .icon img {
-    width: 18px;
-    height: 18px;
-  }
+    /* ━━━━━ Labels ━━━━━ */
+    label {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
 
-  /* ━━━━━ Button ━━━━━ */
-  .submit-button {
-    padding: 11px;
-    font-size: 14px;
-    margin-top: 15px;
-  }
+    /* ━━━━━ Icon ━━━━━ */
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
 
-  /* ━━━━━ Checkbox ━━━━━ */
-  .remember {
-    top: 0.45rem;
-    font-size: 12px;
-    margin-bottom: 12px;
-  }
+    .icon img {
+        width: 18px;
+        height: 18px;
+    }
 
-  .checkmark {
-    width: 16px;
-    height: 16px;
-  }
+    /* ━━━━━ Button ━━━━━ */
+    .submit-button {
+        padding: 11px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
 
-  /* ━━━━━ Social Buttons ━━━━━ */
-  .social-btn {
-    width: 40px;
-    height: 40px;
-  }
+    /* ━━━━━ Checkbox ━━━━━ */
+    .remember {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
 
-  .social-btn img {
-    width: 16px;
-    height: 16px;
-  }
+    .checkmark {
+        width: 16px;
+        height: 16px;
+    }
 
-  .social-login {
-    gap: 1rem;
-  }
+    /* ━━━━━ Social Buttons ━━━━━ */
+    .social-btn {
+        width: 40px;
+        height: 40px;
+    }
 
-  /* ━━━━━ Separator & Text ━━━━━ */
-  .separator {
-    margin: 18px 0;
-    gap: 8px;
-  }
+    .social-btn img {
+        width: 16px;
+        height: 16px;
+    }
 
-  .separator span {
-    font-size: 0.86em;
-    font-weight: bold;
-  }
+    .social-login {
+        gap: 10px;
+    }
 
-  .switch-text {
-    font-size: 13px;
-    margin-top: 16px;
-  }
+    /* ━━━━━ Separator & Text ━━━━━ */
+    .separator {
+        margin: 18px 0;
+        gap: 8px;
+    }
 
-  .flip-link {
-    font-weight: 600;
-  }
+    .separator span {
+        font-size: 12px;
+        font-weight: bold;
+    }
 
-  /* ━━━━━ Terms ━━━━━ */
-  .terms-text {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2px;
-    /* font-size: 11px; */
-    font-size: 0.9rem;
-    margin-top: 8px;
-    margin-bottom: 10px;
-    white-space: nowrap;
-    /* font-size: 1.rem; */
-    /* gap: 5px; */
-    /* margin-top: 12px; */
-  }
+    .switch-text {
+        font-size: 13px;
+        margin-top: 16px;
+    }
 
-  .terms-text a {
-    justify-content: center;
-    white-space: nowrap;
-    color: var(--Link-color-form);
-    font-weight: bold;
-  }
+    .flip-link {
+        font-weight: 600;
+    }
 
-  .options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px auto 4px auto;
-    font-size: 13px;
-  }
+    /* ━━━━━ Terms ━━━━━ */
+    .terms-text {
+        font-size: 13px;
+        gap: 5px;
+        margin-top: 12px;
+    }
 
-  /* ━━━━━ Footer ━━━━━ */
-  footer {
-    padding: 15px 10px;
-  }
+    .terms-text a {
+        font-size: 12px;
+    }
 
-  .footer-content {
-    flex-direction: column;
-    gap: 10px;
-    font-size: 12px;
-  }
+    /* ━━━━━ Footer ━━━━━ */
+    footer {
+        padding: 15px 10px;
+    }
 
-  .social-icons {
-    gap: 8px;
-  }
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+    }
 
-  .social-icons svg {
-    width: 16px;
-    height: 16px;
-  }
+    .social-icons {
+        gap: 8px;
+    }
+
+    .social-icons svg {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 /* Orientation is when turn the phone vertically : Landscape */
-/* Landscape */
 @media only screen and (max-width: 600px) and (orientation: landscape) {
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-  }
-
+  
+}
+/* 601 - 768 / Tablet*/
+@media only screen and (min-width: 601px) and (max-width: 768px) {
   header {
-    justify-content: center;
-    align-items: center;
-    padding: 0.6rem 1.5rem;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .Logo-top {
-    font-size: 1.4rem;
-  }
-
-  .logo-text {
-    font-size: 1.1rem;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
   }
 
   nav ul {
     flex-wrap: wrap;
-    gap: 0.5rem;
     justify-content: center;
-  }
-
-  nav ul li,
-  nav ul a {
-    padding: 2px 5px;
-    font-size: 0.9rem;
-  }
-
-  .nav-login-btn {
-    padding: 0.25rem 0.7rem !important;
-    font-size: 0.9rem;
-  }
-
-  .Container-Card {
-    padding: 0.2rem 0.5rem !important;
-    margin: 0.1rem auto 0.5rem auto;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    gap: 12px;
   }
 
   .flip-card {
-    width: 98%;
+    width: 100%;
+    max-width: 420px;
     height: auto;
-    min-height: auto !important;
-    max-width: 98% !important;
+    min-height: 650px;
   }
 
   .flip-card-front,
   .flip-card-back {
-    position: absolute;
-    padding: 12px 8px;
-    border-radius: 0.7em;
-    box-shadow: none;
-    height: auto;
-    min-height: auto;
-  }
-  
-  .flip-card-back{
-    margin-bottom: -10000000000px;
+    padding: 35px 28px;
   }
 
   h2 {
-    font-size: 17px;
-    margin-bottom: 10px;
-  }
-
-  .form__field {
-    font-size: 11px;
-    padding: 6px 18px 6px 8px;
-    margin-bottom: 7px;
-  }
-
-  .submit-button {
-    padding: 7px;
-    font-size: 11px;
-    margin-top: 9px;
-  }
-
-  .separator {
-    margin: 8px 0;
-    gap: 4px;
-  }
-
-  .separator span {
-    font-size: 0.7em;
-  }
-
-  .social-btn {
-    width: 32px;
-    height: 32px;
-  }
-
-  .social-btn img {
-    width: 13px;
-    height: 13px;
-  }
-
-  .terms-text {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2px;
-    font-size: 0.75rem;
-    margin-top: 5px;
-    margin-bottom: 6px;
-  }
-
-  .terms-text a {
-    font-size: 0.75rem;
-    color: var(--Link-color-form);
-    font-weight: bold;
-  }
-
-  footer {
-    padding: 8px 6px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: auto;
+    font-size: 28px;
+    margin-bottom: 22px;
   }
 
   .footer-content {
     flex-direction: column;
-    gap: 4px;
-    font-size: 9px;
+    gap: 15px;
   }
 
-  .social-icons {
-    gap: 4px;
-  }
-
-  .social-icons svg {
-    width: 12px;
-    height: 12px;
-  }
-
-  .input-group {
-    margin-bottom: 10px;
-  }
-
-  .remember {
-    font-size: 10px;
-    margin-bottom: 8px;
-  }
-
-  .checkmark {
-    width: 14px;
-    height: 14px;
-  }
-
-  .switch-text {
-    font-size: 10px;
-    margin-top: 8px;
-  }
 }
 
-/* 
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-  .Container-Card {
-    padding: 25px 20px;
-    margin: 20px auto;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .flip-card {
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-    min-height: auto;
-  }
-
-  .flip-card-front,
-  .flip-card-back {
-    padding: 28px 24px;
-    border-radius: 15px;
-    height: auto;
-    min-height: auto;
-  }
-
-  h2 {
-    font-size: 25px;
-    margin-bottom: 18px;
-  }
-
-  .form__field {
-    font-size: 14px;
-    padding: 11px 33px 11px 14px;
-    margin-bottom: 16px;
-  }
-
-  .submit-button {
-    padding: 12px;
-    font-size: 14px;
-    margin-top: 16px;
-  }
-
-  .separator {
-    margin: 20px 0;
-  }
-
-  .social-btn {
-    width: 43px;
-    height: 43px;
-  }
-
-  .social-btn img {
-    width: 19px;
-    height: 19px;
-  }
-
-  .terms-text {
-    font-size: 12px;
-    margin-top: 8px;
-  }
-
-  .terms-text a {
-    font-size: 12px;
-  }
-
-  footer {
-    padding: 18px 15px;
-    margin-top: auto;
-  }
-
-  .remember {
-    font-size: 12px;
-  }
-
-  .switch-text {
-    font-size: 12px;
-    margin-top: 16px;
-  }
-} */
-
+/* 769 - 991 / Lager Tablet */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
+  
 }
 /* 992 - 1000   */
 @media only screen and (min-width: 992px) {
+  
 }
+
