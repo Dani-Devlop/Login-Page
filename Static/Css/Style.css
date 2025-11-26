@@ -721,8 +721,7 @@ footer {
   /* ━━━━━ Container ━━━━━ */
   .Container-Card {
     padding: 0.5rem 0.2rem 0rem !important;
-    margin: 0.5rem auto -2.5rem auto;
-     margin-bottom: 2rem;
+    margin: 0.5rem auto -2rem auto;
   }
   /* ━━━━━ Flip Card ━━━━━ */
   .underline {
@@ -902,9 +901,170 @@ footer {
 }
 
 /* Orientation is when turn the phone vertically : Landscape */
+/* Landscape */
 @media only screen and (max-width: 600px) and (orientation: landscape) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  header {
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .Logo-top {
+    font-size: 1.4rem;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  nav ul li,
+  nav ul a {
+    padding: 2px 5px;
+    font-size: 0.9rem;
+  }
+
+  .nav-login-btn {
+    padding: 0.25rem 0.7rem !important;
+    font-size: 0.9rem;
+  }
+
+  .Container-Card {
+    padding: 0.2rem 0.5rem !important;
+    margin: 0.1rem auto 0.5rem auto;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .flip-card {
+    width: 98%;
+    height: auto;
+    min-height: auto !important;
+    max-width: 98% !important;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    padding: 12px 8px;
+    border-radius: 0.7em;
+    box-shadow: none;
+    height: auto;
+    min-height: auto;
+    position: relative;
+  }
+
+  h2 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .form__field {
+    font-size: 11px;
+    padding: 6px 18px 6px 8px;
+    margin-bottom: 7px;
+  }
+
+  .submit-button {
+    padding: 7px;
+    font-size: 11px;
+    margin-top: 9px;
+  }
+
+  .separator {
+    margin: 8px 0;
+    gap: 4px;
+  }
+
+  .separator span {
+    font-size: 0.7em;
+  }
+
+  .social-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-btn img {
+    width: 13px;
+    height: 13px;
+  }
+
+  .terms-text {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    font-size: 0.75rem;
+    margin-top: 5px;
+    margin-bottom: 6px;
+  }
+
+  .terms-text a {
+    font-size: 0.75rem;
+    color: var(--Link-color-form);
+    font-weight: bold;
+  }
+
+  footer {
+    padding: 8px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 9px;
+  }
+
+  .social-icons {
+    gap: 4px;
+  }
+
+  .social-icons svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .input-group {
+    margin-bottom: 10px;
+  }
+
+  .remember {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+
+  .checkmark {
+    width: 14px;
+    height: 14px;
+  }
+
+  .switch-text {
+    font-size: 10px;
+    margin-top: 8px;
+  }
 }
-/* 601 - 768 / Tablet*/
+
+
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   header {
     flex-direction: column;
