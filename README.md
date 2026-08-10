@@ -1,24 +1,37 @@
+<p align="center">
+  <a href="https://github.com/Dani-Devlop/Login-Page">
+    <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Project Status">
+  </a>
+  <a href="https://github.com/Dani-Devlop/Login-Page/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue" alt="License">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/HTML-5-orange" alt="HTML">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/CSS-3-blueviolet" alt="CSS">
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/JavaScript-ES6-yellow" alt="JavaScript">
+  </a>
+</p>
+
+---
+
+## 🖼️ Preview
+
+<p align="center">
+  <img src="Static/Image/screenshot.png" alt="Login Page Screenshot" width="80%">
+  <br>
+  <em>👉 لطفاً یک اسکرین‌شات از صفحه بگیرید و با نام <code>screenshot.png</code> در پوشه‌ی <code>Static/Image/</code> قرار دهید تا این بخش نمایش داده شود.</em>
+</p>
+
+---
 
 # 🔐 Login Page – Responsive Flip Card UI
 
 A modern, fully responsive login and sign-up page built with HTML, CSS, and JavaScript.  
 This project features a **3D flip card** animation that smoothly transitions between the login and registration forms, providing a sleek and interactive user experience.
-
-![License](https://img.shields.io/badge/license-MIT-blue)
-![HTML](https://img.shields.io/badge/HTML-5-orange)
-![CSS](https://img.shields.io/badge/CSS-3-blueviolet)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
-![Status](https://img.shields.io/badge/status-active-brightgreen)
-
----
-
-## 📸 Screenshot
-
-> *Add a screenshot of your login page here to give users a quick preview.*  
-> You can place an image in the `Static/Image/` folder and link it like this:  
-> `![Login Page Screenshot](Static/Image/screenshot.png)`
-
-*(Replace the above line with your actual screenshot)*
 
 ---
 
@@ -38,10 +51,10 @@ This project features a **3D flip card** animation that smoothly transitions bet
 
 | Technology | Purpose |
 |------------|---------|
-| **HTML5** | Structure and content |
-| **CSS3** | Styling, animations, and responsiveness |
+| **HTML5**  | Structure and content |
+| **CSS3**   | Styling, animations, and responsiveness |
 | **JavaScript** | Flip card interaction and form validation |
-| **Font Awesome** *(optional)* | Social media icons (if used) |
+| **Font Awesome** *(optional)* | Social media icons |
 
 ---
 
@@ -132,4 +145,3 @@ Project Link: https://github.com/Dani-Devlop/Login-Page
 ---
 
 ⭐ If you found this project useful, please give it a star! ⭐
-
