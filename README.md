@@ -21,9 +21,9 @@
 ## 🖼️ Preview
 
 <p align="center">
-  <img src="Static/Image/screenshot.png" alt="Login Page Screenshot" width="80%">
+  <img src="/Static/screenshots/login.png" alt="Login Page Screenshot" width="80%">
   <br>
-  <em>👉 لطفاً یک اسکرین‌شات از صفحه بگیرید و با نام <code>screenshot.png</code> در پوشه‌ی <code>Static/Image/</code> قرار دهید تا این بخش نمایش داده شود.</em>
+  <img src="/Static/screenshots/Signup.png" alt="Login Page Screenshot" width="80%">
 </p>
 
 ---
