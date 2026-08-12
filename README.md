@@ -13,9 +13,6 @@
     <img src="https://img.shields.io/badge/CSS-3-blueviolet?style=flat-square&logo=css3" alt="CSS3">
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=flat-square&logo=javascript" alt="JavaScript">
-  </a>
-  <a href="#">
     <img src="https://img.shields.io/badge/Responsive-Yes-success?style=flat-square" alt="Responsive">
   </a>
 </p>
