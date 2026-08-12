@@ -25,12 +25,9 @@
 ## 🖼️ Preview
 
 <p align="center">
-  <img src="Static/ScreenShot/laptop.png" alt="Lyric-Site Preview" width="700">
-  <img src="Static/ScreenShot/phone_tab.png" alt="Lyric-Site Preview" width="700">
-
+  <img src="Static/screenshots/login.png" alt="Login Page Screenshot" width="80%">
+  <img src="Static/screenshots/Signup.png" alt="Login Page Screenshot" width="80%">
 </p>
-
-
 ---
 
 # 🔐 Login Page – Responsive Flip Card UI
