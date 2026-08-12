@@ -25,10 +25,11 @@
 ## 🖼️ Preview
 
 <p align="center">
-  <img src="Static/Image/screenshot.png" alt="Login Page Screenshot" width="80%">
-  <br>
-  <em>👉 لطفاً یک اسکرین‌شات از صفحه بگیرید و با نام <code>screenshot.png</code> در پوشه‌ی <code>Static/Image/</code> قرار دهید تا این بخش نمایش داده شود.</em>
+  <img src="Static/ScreenShot/laptop.png" alt="Lyric-Site Preview" width="700">
+  <img src="Static/ScreenShot/phone_tab.png" alt="Lyric-Site Preview" width="700">
+
 </p>
+
 
 ---
 
